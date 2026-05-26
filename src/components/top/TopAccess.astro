@@ -1,0 +1,276 @@
+---
+import TopTitleLv2 from "./TopTitleLv2.astro";
+import Button from "../common/Button.astro";
+---
+
+<section class="top-access">
+  <div class="l-container">
+    <div class="l-section">
+      <div class="top-access-title-lv2">
+        <TopTitleLv2
+          title="アクセス"
+          titleClass="c-top-title-lv2"
+          titleImagePath="/assets/images/text/text-section-title-access.svg"
+          titleImageWidth="161"
+          titleImageHeight="46"
+        />
+      </div>
+      <div class="l-section-body">
+        <div class="top-access-list">
+          <a href="#" target="_blank" rel="noopener noreferrer" class="top-access-item">
+            <h3 class="top-access-title-lv3">江古田教室</h3>
+            <div class="top-access-image">
+              <img src="/assets/images/top/pic-top-access-ekoda.webp" alt="" loading="lazy" decoding="async" width="592" height="296">
+            </div>
+            <p class="top-access-address">東京都練馬区小竹町1-63-2</p>
+            <p class="top-access-location">西武池袋線江古田駅北口<br>徒歩２分</p>
+            <p class="top-access-link-text">Googleマップで開く</p>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="top-access-item">
+            <h3 class="top-access-title-lv3">練馬教室</h3>
+            <div class="top-access-image">
+              <img src="/assets/images/top/pic-top-access-nerima.webp" alt="" loading="lazy" decoding="async" width="592" height="296">
+            </div>
+            <p class="top-access-address">東京都練馬区練馬1-19-2<span>NERIKITAビル</span></p>
+            <p class="top-access-location">西武池袋線練馬駅北口<br>徒歩１分</p>
+            <p class="top-access-link-text">Googleマップで開く</p>
+          </a>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="top-access-item">
+            <h3 class="top-access-title-lv3">中野教室<span>（広町みらい公園講座）</span></h3>
+            <div class="top-access-image">
+              <img src="/assets/images/top/pic-top-access-nakano.webp" alt="" loading="lazy" decoding="async" width="592" height="296">
+            </div>
+            <p class="top-access-address">東京都中野区弥生町6-1-7</p>
+            <p class="top-access-location">丸ノ内線方南町駅２番出口<br>徒歩５分</p>
+            <p class="top-access-link-text">Googleマップで開く</p>
+          </a>
+        </div>
+        <div class="top-access-btn">
+          <Button
+          buttonText="近隣の駐輪･駐車情報を見る"
+          buttonUrl="/access/#access"
+        />
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .top-access {
+    overflow: hidden;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      opacity: .65;
+      position: absolute;
+      z-index: -1;
+    }
+
+    &::before {
+      width: 445px;
+      height: 377px;
+      background-image: url(/assets/images/top/bg-top-access-01.webp);
+      bottom: -10px;
+      left: calc(50% - 150px);
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      width: 295px;
+      height: 296px;
+      background-image: url(/assets/images/top/bg-top-access-02.webp);
+      top: -24px;
+      left: calc(50% + 240px);
+      transform: translateX(-50%);
+    }
+  }
+
+  .top-access-list {
+    display: grid;
+    gap: 32px;
+    max-width: 400px;
+    padding: 0;
+    margin-inline: auto;
+  }
+
+  .top-access-item {
+    padding-block: 24px;
+    padding-inline: 24px;
+    border-radius: 10px;
+    background-color: var(--color-bg-beige);
+    box-shadow: 4px 4px 20px rgb(0 0 0 / .18);
+    text-align: center;
+  }
+
+  .top-access-title-lv3 {
+    display: grid;
+    place-items: center;
+    color: var(--color-main);
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    line-height: 1.35;
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+
+  .top-access-image {
+    margin-block-start: 16px;
+    overflow: hidden;
+  }
+
+  .top-access-address {
+    margin-block-start: 10px;
+    line-height: 1.5;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .top-access-location {
+    padding-block-end: 24px;
+    margin-block-start: 24px;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    line-height: 1.6;
+  }
+
+  .top-access-link-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: fit-content;
+    padding-block: 6px;
+    padding-inline: 20px;
+    border-radius: 100px;
+    border: 1px solid;
+    margin-inline: auto;
+    color: var(--color-main);
+    font-size: 12px;
+
+    &::after {
+      content: "";
+      width: 6px;
+      height: 10px;
+      background-color: currentColor;
+      clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    }
+  }
+
+  .top-access-btn {
+    margin-block-start: 64px;
+    text-align: center;
+  }
+
+  @include mq() {
+    .top-access {
+      &::before {
+        width: 579px;
+        height: 490px;
+        bottom: -100px;
+        left: calc(50% - (579px / 2));
+      }
+
+      &::after {
+        width: 383px;
+        height: 385px;
+        top: -49px;
+        left: calc(50% + (385px / 2) + 100px);
+      }
+    }
+
+    .top-access-list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+      max-width: 100%;
+    }
+
+    .top-access-item {
+      display: flex;
+      flex-direction: column;
+      padding-block: 32px;
+    }
+
+    .top-access-title-lv3 {
+      font-size: 24px;
+
+      span {
+        font-size: 14px;
+      }
+    }
+
+    .top-access-image {
+      margin-block-start: 24px;
+    }
+
+    .top-access-address {
+      font-size: 14px;
+    }
+
+    .top-access-location {
+      font-size: 17px;
+    }
+
+    .top-access-link-text {
+      margin-block-start: auto;
+    }
+
+    .top-access-btn {
+      margin-block-start: 80px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .top-access {
+      &::before {
+        width: 891px;
+        height: 755px;
+        bottom: -155px;
+        left: calc(50% - (891px / 2));
+      }
+
+      &::after {
+        width: 590px;
+        height: 593px;
+        top: -76px;
+        left: calc(50% + (590px / 2) + 201px);
+      }
+    }
+
+    .top-access-list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: min(48px, calc(48 / 1280 * 100vw));
+    }
+
+    .top-access-title-lv3 {
+      height: 54px;
+    }
+
+    .top-access-image {
+      margin-block-start: 20px;
+    }
+  }
+
+  @media (any-hover: hover) {
+    .top-access-item {
+      transition: filter .5s ease;
+
+      &:hover {
+        filter: brightness(90%) contrast(117%);
+      }
+    }
+  }
+</style>

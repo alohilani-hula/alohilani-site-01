@@ -1,0 +1,167 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="about-profile">
+  <div class="l-container">
+    <div class="l-section">
+      <div class="about-profile-title-lv2">
+        <PageTitleLv2 pageTitle="Alohilani Masako Takahashi" />
+      </div>
+      <div class="l-section-body">
+        <div class="about-profile-career">
+          <div class="about-profile-bar"></div>
+          <dl class="about-profile-career-list">
+            <div class="about-profile-career-item">
+              <dt>2010年</dt>
+              <dd>地域フラサークルにてフラを始める</dd>
+            </div>
+            <div class="about-profile-career-item">
+              <dt>2012〜2020年</dt>
+              <dd>Ka Pā Hula O Māhealani本校にて三輪あさ氏に師事</dd>
+            </div>
+            <div class="about-profile-career-item">
+              <dt>2018年</dt>
+              <dd>ハワイアンネーム『Alohilani』を取得</dd>
+            </div>
+            <div class="about-profile-career-item">
+              <dt>2021年〜現在</dt>
+              <dd>Kumu Kalani Po`omaihealani氏から'Ōlapaを師事している</dd>
+            </div>
+            <div class="about-profile-career-item">
+              <dt>2024年</dt>
+              <dd><span>Lei Qeen Pegent　オアフ島プリンセス</span><span>オアフ島キングカメハメハセレブレーションに参加</span></dd>
+            </div>
+          </dl>
+        </div>
+        <p class="about-profile-text">フラを通して心と体を整える時間を大切にしています。</p>
+        <ul class="about-profile-list">
+          <li class="about-profile-item">カルチャースクールで延べ約400人の方にレッスンを実施</li>
+          <li class="about-profile-item">年間を通して地域のお祭りやハワイアンイベントなど、ステージ出演実績多数</li>
+          <li class="about-profile-item">最新の活動状況をInstagramで発信中</li>
+          <li class="about-profile-item">就労支援施設やシニア福祉施設でも講師を務め、フラの楽しさを伝えています</li>
+        </ul>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .about-profile {
+    background-color: var(--color-bg-beige);
+  }
+
+  .about-profile-career {
+    display: flex;
+    gap: 16px;
+  }
+
+  .about-profile-bar {
+    width: 20px;
+    height: auto;
+    background-image: url(../../../public/assets/images/about/bg-about-profile.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 57% 50%;
+  }
+
+  .about-profile-career-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .about-profile-career-item {
+    dt {
+      font-size: 15px;
+      font-weight: 700;
+    }
+
+    dd {
+      span {
+        display: grid;
+        grid-template-columns: 4px 1fr;
+        gap: .5em;
+        padding-inline-start: .25em;
+
+        &::before {
+          content: "";
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          margin-block-start: 9px;
+          background-color: var(--color-base);
+        }
+      }
+    }
+  }
+
+  .about-profile-text {
+    margin-block-start: 32px;
+  }
+
+  .about-profile-list {
+    display: grid;
+    gap: .5em;
+    padding: 0;
+    margin-block-start: .5em;
+  }
+
+  .about-profile-item {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: .5em;
+    padding-inline-start: .5em;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-block-start: 9px;
+      background-color: var(--color-main);
+    }
+  }
+
+  @include mq() {
+    .about-profile-career {
+      gap: 24px;
+    }
+
+    .about-profile-bar {
+      width: 16px;
+    }
+
+    .about-profile-career-list {
+      gap: 16px;
+    }
+
+    .about-profile-career-item {
+      display: flex;
+      gap: 20px;
+
+      dt {
+        flex: 130px 0 0;
+        font-size: 18px;
+      }
+      dd {
+        span {
+          &::before {
+            margin-block-start: 11px;
+          }
+        }
+      }
+    }
+
+    .about-profile-text {
+      margin-block-start: 40px;
+    }
+
+    .about-profile-item {
+      &::before {
+        margin-block-start: 11px;
+      }
+    }
+  }
+</style>

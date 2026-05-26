@@ -1,0 +1,65 @@
+---
+const { pageTitle, pageTitleImagePath, pageTitleImageWidth, pageTitleImageHeight } = Astro.props;
+---
+
+<div class="c-page-kv">
+  <div class="l-container">
+    <div class="c-page-kv-heading">
+      <h1 class="c-page-kv-title-lv1">{pageTitle}</h1>
+      <div class="c-page-kv-image">
+        <img src={pageTitleImagePath} alt="" loading="eager" decoding="async" width={pageTitleImageWidth} height={pageTitleImageHeight}>
+      </div>
+    </div>
+  </div><!-- /.l-container -->
+</div>
+
+<style is:global lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .c-page-kv {
+    padding-block: 64px;
+    margin-block-start: 60px;
+    background-color: var(--color-bg-skyblue);
+  }
+
+  .c-page-kv-heading {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-main);
+  }
+
+  .c-page-kv-title-lv1 {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .c-page-kv-image {
+    img {
+      width: 85%;
+      margin-inline: auto;
+    }
+  }
+
+  @include mq() {
+    .c-page-kv {
+      padding-block: 80px;
+      margin-block-start: 80px;
+    }
+
+    .c-page-kv-heading {
+      gap: 12px;
+    }
+
+    .c-page-kv-title-lv1 {
+      font-size: 16px;
+    }
+
+    .c-page-kv-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+</style>

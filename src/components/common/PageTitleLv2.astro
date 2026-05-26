@@ -1,0 +1,21 @@
+---
+const { pageTitle } = Astro.props;
+---
+
+<h2 class="c-page-title-lv2">{pageTitle}</h2>
+
+<style is:global lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .c-page-title-lv2 {
+    color: var(--color-main);
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  @include mq() {
+    .c-page-title-lv2 {
+      font-size: 32px;
+    }
+  }
+</style>

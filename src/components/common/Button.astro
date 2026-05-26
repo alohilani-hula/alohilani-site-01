@@ -1,0 +1,77 @@
+---
+const { buttonUrl, buttonText, buttonAriaLabel, buttonTarget } = Astro.props;
+---
+
+
+<a href={buttonUrl} target={buttonTarget} rel={buttonTarget === "_blank" ? "noopener noreferrer" : undefined} aria-label={buttonAriaLabel} class="c-button">{buttonText}</a>
+
+<style is:global lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .c-button {
+    display: inline-block;
+    padding-block: 9px;
+    padding-inline: calc(16px + 16px + 8px) 16px;
+    border-radius: 100px;
+    background-color: var(--color-main);
+    color: var(--color-white);
+    line-height: 1.5;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      margin-block: auto;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    &::before {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: var(--color-white);
+      left: 16px;
+    }
+
+    &::after {
+      width: 5px;
+      height: 9px;
+      background-image: url(/assets/images/global/icon-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      left: calc(16px + 6px);
+    }
+  }
+
+  @include mq() {
+    .c-button {
+      padding-block: 16px;
+      padding-inline: calc(24px + 20px + 16px) 24px;
+
+      &::before {
+        width: 22px;
+        height: 22px;
+        left: 24px;
+      }
+
+      &::after {
+        width: 7px;
+        height: 12px;
+        left: calc(24px + 8px);
+      }
+    }
+  }
+
+  @media (any-hover: hover) {
+    .c-button {
+      transition: filter .5s ease;
+
+      &:hover {
+        filter: brightness(85%) contrast(115%);
+      }
+    }
+  }
+</style>

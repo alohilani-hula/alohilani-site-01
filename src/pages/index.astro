@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TopKv from "../components/top/TopKv.astro";
+import TopLead from "../components/top/TopLead.astro";
+import TopLesson from "../components/top/TopLesson.astro";
+import TopVoice from "../components/top/TopVoice.astro";
+import TopFaq from "../components/top/TopFaq.astro";
+import TopAccess from "../components/top/TopAccess.astro";
+// import Cta from "../components/common/Cta.astro";
+
+---
+
+<Layout
+  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  ogType="website"
+  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  noIndex="true"
+>
+  <main class="top">
+    <!-- top-kv -->
+    <TopKv />
+
+    <!-- top-lead -->
+    <TopLead />
+
+    <!-- top-lesson -->
+    <TopLesson />
+
+    <!-- top-voice -->
+    <TopVoice />
+
+    <!-- top-faq -->
+    <TopFaq />
+
+    <!-- top-access -->
+    <TopAccess />
+
+  </main>
+
+  <!-- cta -->
+  <!-- <Cta /> -->
+</Layout>

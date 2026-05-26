@@ -1,0 +1,69 @@
+---
+import TopTitleLv2 from "./TopTitleLv2.astro";
+import Button from "../common/Button.astro";
+---
+
+<section class="top-faq">
+  <div class="l-container-s">
+    <div class="l-section">
+      <div class="top-faq-title-lv2">
+        <TopTitleLv2
+          title="よくあるご質問"
+          titleClass="c-top-title-lv2"
+          titleImagePath="/assets/images/text/text-section-title-faq.svg"
+          titleImageWidth="73"
+          titleImageHeight="46"
+        />
+      </div>
+      <div class="l-section-body">
+        <div class="top-faq-list">
+          <ul class="c-faq-list">
+            <li class="c-faq-item">
+              <dl class="c-faq-description-list">
+                <dt>ケイキ（子供）クラスのレッスン中は、親の待機場所はありますか？</dt>
+                <dd>外出することも、スタジオ内でお待ちいただくことも可能です。<br>外出された場合は、レッスン終了時間にお戻りください。スタジオ内で見学しながらお待ちいただくこともできます。</dd>
+              </dl>
+            </li>
+            <li class="c-faq-item">
+              <dl class="c-faq-description-list">
+                <dt>子連れでも保護者のみレッスンに参加することはできますか？</dt>
+                <dd>お子様を預けることができない場合も、参加が可能です。<br>お子様はスタジオ内で遊びながらお待ちいただけます。</dd>
+              </dl>
+            </li>
+            <li class="c-faq-item">
+              <dl class="c-faq-description-list">
+                <dt>振替レッスンはできますか？</dt>
+                <dd>同月、翌月に限り可能です。<br>他クラスに行くのが難しい場合は、Zoomレッスンでも振替可能です。</dd>
+              </dl>
+            </li>
+          </ul>
+        </div>
+        <div class="top-faq-btn">
+          <Button
+          buttonText="よくあるご質問をもっと見る"
+          buttonUrl="/faq"
+        />
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .top-faq {
+    background-color: var(--color-bg-skyblue);
+  }
+
+  .top-faq-btn {
+    margin-block-start: 64px;
+    text-align: center;
+  }
+
+  @include mq() {
+    .top-faq-btn {
+      margin-block-start: 80px;
+    }
+  }
+</style>

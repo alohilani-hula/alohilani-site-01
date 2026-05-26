@@ -1,0 +1,42 @@
+/* -----------------------------------
+  global
+----------------------------------- */
+
+/* global > color
+----------------------------------- */
+:root {
+  --color-base: #333;
+  --color-main: #082a45;
+  --color-white:#fff;
+  --color-brown:#432800;
+  --color-sub: #f7fafa;
+  --color-bg-base: #fbfaf9;
+  --color-bg-skyblue: #cde4eb;
+  --color-bg-beige: #f5eee7;
+}
+
+/* global > content-width
+----------------------------------- */
+:root {
+  --width-content: 1120px;
+  --width-content-s: 840px;
+}
+
+/* global > device-width
+----------------------------------- */
+:root {
+  --width-sp: 390px;
+  --width-pc: 1440px;
+}
+
+/* global > font
+----------------------------------- */
+:root {
+  --font-family-base: -apple-system,
+  BlinkMacSystemFont,
+  "Hiragino Kaku Gothic ProN",
+  "Noto Sans JP",
+  "Hiragino Sans",
+  Meiryo,
+  sans-serif;;
+}

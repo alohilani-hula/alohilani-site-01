@@ -1,0 +1,80 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="about-message">
+  <div class="l-container">
+    <div class="l-section">
+      <div class="about-message-title-lv2">
+        <PageTitleLv2 pageTitle="母として、ひとりの私として" />
+      </div>
+      <div class="about-message-section-body l-section-body">
+        <div class="about-message-image">
+          <img src="/assets/images/about/pic-about-message.webp" alt="" loading="lazy" decoding="async" width="572" height="856">
+        </div>
+        <div class="about-message-description">
+          <p class="about-message-text">私は子育て中にフラに出会いました。</p>
+          <p class="about-message-text">子育てに追われる毎日。<br>夫も忙しく、3人の息子をほぼ一人で育てる中で、<span class="u-marker">いつも自分のことは後回し</span>。<br>母でいることに必死で、でもふと「私自身はどこにいるんだろう」と感じていました。</p>
+          <p class="about-message-text">そんなときに出会ったのがフラ。<br>ハワイアンの音楽に合わせて踊ると心が軽くなり、自然や愛を表現する振りに癒され、ストレスが和らいでいきました。</p>
+          <p class="about-message-text">「<span class="u-marker">母である前に、一人の私として笑顔になれる</span>」<br>その喜びをくれたのがフラだったのです。</p>
+          <p class="about-message-text">その経験が私の人生を大きく変えました。<br>フラの奥深さ、アロハの精神、そしてハワイの人々が大切にしてきた文化を伝えたい。<br>そう強く思うようになりました。</p>
+          <p class="about-message-text">生徒さんおひとりおひとりが<span class="u-marker">自分らしい表現を見つけて輝き、踊りながら自然や人との繋がりを感じる</span>。<br>そんな心豊かな時間を過ごせるようにレッスンをしています。
+          </p>
+          <p class="about-message-text">そして、<span class="u-marker">仲間と一緒に楽しむことを大切に</span>し、皆さんの<span class="u-marker">毎日が少しでも豊かに、温かくなる</span>ようにと願っています。</p>
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+  .about-message-section-body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-message-image {
+    img {
+      aspect-ratio: 3 / 2;
+      height: auto;
+      object-fit: cover;
+      object-position: 0% 5%;
+    }
+  }
+
+  .about-message-description {
+    display: grid;
+    gap: 1em;
+    max-width: 720px;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  @include mq() {
+    .about-message-section-body {
+      flex-direction: row;
+      gap: 48px;
+      gap: clamp(40px, calc(48 / 1280 * 100vw), 48px);
+    }
+
+    .about-message-image {
+      flex-shrink: 0;
+
+      img {
+        width: clamp(200px, calc(240 / 1280 * 100vw), 240px);
+        aspect-ratio: initial;
+        object-fit: contain;
+        object-position: 0% 0%;
+      }
+    }
+
+    .about-message-description {
+      display: grid;
+      gap: 1em;
+      font-size: 16px;
+      line-height: 2;
+    }
+  }
+</style>

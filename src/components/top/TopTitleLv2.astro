@@ -1,0 +1,54 @@
+---
+const { title, titleClass, titleImagePath, titleImageWidth, titleImageHeight } = Astro.props;
+---
+
+<div class={titleClass || "c-top-title-lv2"}>
+  <h2 class="c-top-title-lv2-text">{title}</h2>
+  <div class="c-top-title-lv2-image">
+    <img src={titleImagePath} alt="" loading="lazy" decoding="async" width={titleImageWidth} height={titleImageHeight}>
+  </div>
+</div>
+
+<style is:global lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .c-top-title-lv2 {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 4px;
+    color: var(--color-main);
+
+    &--white {
+      color: var(--color-white);
+    }
+  }
+
+  .c-top-title-lv2-text {
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .c-top-title-lv2-image {
+    img {
+      width: 85%;
+      margin-inline: auto;
+    }
+  }
+
+  @include mq() {
+    .c-top-title-lv2 {
+      gap: 6px;
+    }
+
+    .c-top-title-lv2-text {
+      font-size: 15px;
+    }
+
+    .c-top-title-lv2-image {
+      img {
+        width: 100%;
+      }
+    }
+  }
+</style>

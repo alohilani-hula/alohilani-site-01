@@ -1,0 +1,143 @@
+---
+import TopTitleLv2 from "./TopTitleLv2.astro";
+import Button from "../common/Button.astro";
+---
+
+<section class="top-voice">
+  <div class="l-container-s">
+    <div class="l-section">
+      <div class="top-voice-title-lv2">
+        <TopTitleLv2
+          title="生徒様の声"
+          titleClass="c-top-title-lv2"
+          titleImagePath="/assets/images/text/text-section-title-voice.svg"
+          titleImageWidth="125"
+          titleImageHeight="46"
+        />
+      </div>
+      <div class="l-section-body">
+        <ul class="top-voice-list">
+          <li class="top-voice-item">
+            <div class="top-voice-content">
+              <h3 class="top-voice-title-lv3">子供の大きな成長を感じられる！</h3>
+              <div class="top-voice-description">
+                <p class="top-voice-text">子供と目を合わせながら、心で通じ合える感じがとても楽しかったです。<br>時には子供から指導が入ったり大きな成長を感じられるのは、親子フラならではだと思いました。<br>なかなか体を動かす機会もないので、とても良い運動になってると思います。</p>
+                <span class="top-voice-name">A.Y.さん（親子フラ）</span>
+              </div>
+            </div>
+            <div class="top-voice-illust">
+              <img src="/assets/images/top/illust-top-voice-01.webp" alt="" loading="lazy" decoding="async" width="252" height="268">
+            </div>
+          </li>
+          <li class="top-voice-item">
+            <div class="top-voice-content">
+              <h3 class="top-voice-title-lv3">ハワイの音楽に触れ、親の私が癒やされています。</h3>
+              <div class="top-voice-description">
+                <p class="top-voice-text">娘がフラを習うようになってハワイの音楽に触れ、親の私が癒されています。<br>娘も年数を重ねる度に楽しくなってきてるようです♫</p>
+                <span class="top-voice-name">C.S.さん（子供クラス）</span>
+              </div>
+            </div>
+            <div class="top-voice-illust">
+              <img src="/assets/images/top/illust-top-voice-02.webp" alt="" loading="lazy" decoding="async" width="252" height="268">
+            </div>
+          </li>
+          <li class="top-voice-item">
+            <div class="top-voice-content">
+              <h3 class="top-voice-title-lv3">毎回レッスンに行くのが本当に楽しみ！</h3>
+              <div class="top-voice-description">
+                <p class="top-voice-text">入会して間もないのですが、先生やお教室の皆さんがとても明るく、親切に接してくださいます。<br>毎回、レッスンに行くのが本当に楽しみです。</p>
+                <span class="top-voice-name">M.K.さん（大人クラス）</span>
+              </div>
+            </div>
+            <div class="top-voice-illust">
+              <img src="/assets/images/top/illust-top-voice-03.webp" alt="" loading="lazy" decoding="async" width="252" height="268">
+            </div>
+          </li>
+        </ul>
+        <div class="top-voice-btn">
+          <Button
+          buttonText="生徒様の声をもっと見る"
+          buttonUrl="/lesson"
+        />
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .top-voice {
+    background-image: url(../../../public/assets/images/top/bg-top-voice.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .top-voice-list {
+    display: grid;
+    gap: 32px;
+    padding: 0;
+  }
+
+  .top-voice-item {
+    padding-block: 24px;
+    padding-inline: 24px;
+    border-radius: 10px;
+    border: 1px solid var(--color-brown);
+  }
+
+  .top-voice-title-lv3 {
+    color: var(--color-brown);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .top-voice-description {
+    display: grid;
+    gap: .5em;
+    margin-block-start: 1em;
+  }
+
+  .top-voice-name {
+    text-align: right;
+  }
+
+  .top-voice-illust {
+    display: none;
+  }
+
+  .top-voice-btn {
+    margin-block-start: 64px;
+    text-align: center;
+  }
+
+  @include mq() {
+    .top-voice-item {
+      display: grid;
+      grid-template-columns: 1fr 126px;
+      align-items: center;
+      gap: 40px;
+      padding-block: 32px;
+      padding-inline: 32px;
+    }
+
+    .top-voice-title-lv3 {
+      font-size: 24px;
+    }
+
+    .top-voice-illust {
+      display: block;
+
+      img {
+        width: 126px;
+      }
+    }
+
+    .top-voice-btn {
+      margin-block-start: 80px;
+    }
+  }
+</style>
