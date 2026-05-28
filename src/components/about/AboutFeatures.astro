@@ -103,7 +103,7 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
       width: 22px;
       height: 22px;
       margin-block-start: 3px;
-      background-image: url(../../../public/assets/images/global/icon-hibiscus.svg);
+      background-image: url(/assets/images/global/icon-hibiscus.svg);
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
@@ -139,8 +139,9 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
 
   @include mq() {
     .about-features-cards {
-      grid-template-columns: repeat(3, 1fr);
-      gap: min(48px, calc(48 / 1280 * 100vw));
+      grid-template-columns: repeat(2, 1fr);
+      gap: 48px;
+      gap: clamp(32px, calc(32 / 768 * 100vw), 48px);
     }
 
     .about-features-cards-item {
@@ -162,6 +163,13 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
       &::before {
         margin-block-start: 11px;
       }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .about-features-cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: min(48px, calc(48 / 1280 * 100vw));
     }
   }
 </style>

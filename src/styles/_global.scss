@@ -9,17 +9,18 @@
   --color-main: #082a45;
   --color-white:#fff;
   --color-brown:#432800;
-  --color-sub: #f7fafa;
+  // --color-sub: #f7fafa;
   --color-bg-base: #fbfaf9;
   --color-bg-skyblue: #cde4eb;
   --color-bg-beige: #f5eee7;
+  --color-bg-blue: #336080;
 }
 
 /* global > content-width
 ----------------------------------- */
 :root {
   --width-content: 1120px;
-  --width-content-s: 840px;
+  --width-content-s: 920px;
 }
 
 /* global > device-width
