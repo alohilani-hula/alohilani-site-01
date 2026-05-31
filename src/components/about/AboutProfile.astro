@@ -76,7 +76,7 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
           width: 4px;
           height: 4px;
           border-radius: 50%;
-          margin-block-start: 9px;
+          margin-block-start: 12px;
           background-color: var(--color-base);
         }
       }
@@ -105,26 +105,12 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
       width: 4px;
       height: 4px;
       border-radius: 50%;
-      margin-block-start: 9px;
+      margin-block-start: 12px;
       background-color: var(--color-main);
     }
   }
 
   @include mq() {
-    .about-profile-career {
-      // display: flex;
-      // gap: 24px;
-    }
-
-    .about-profile-bar {
-      // width: 16px;
-      // height: auto;
-      // background-image: url(../../../public/assets/images/about/bg-about-profile.webp);
-      // background-repeat: no-repeat;
-      // background-size: cover;
-      // background-position: 57% 50%;
-    }
-
     .about-profile-career-list {
       gap: 16px;
     }
@@ -137,23 +123,10 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
         flex: 130px 0 0;
         font-size: 18px;
       }
-      dd {
-        span {
-          &::before {
-            margin-block-start: 11px;
-          }
-        }
-      }
     }
 
     .about-profile-text {
       margin-block-start: 40px;
-    }
-
-    .about-profile-item {
-      &::before {
-        margin-block-start: 11px;
-      }
     }
   }
 </style>

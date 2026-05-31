@@ -14,7 +14,7 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
             <dl class="lesson-flow-description-list">
               <dt>
                 <span class="lesson-flow-number">1.</span>
-                <span class="lesson-flow-term">Oli（祈りの言葉）</span>
+                <span class="lesson-flow-term">Oli</span>
               </dt>
               <dd>ハワイの祈りの言葉を詠唱します。体験時は歌詞をお配りします。</dd>
             </dl>
@@ -64,4 +64,61 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
 <style lang="scss">
   @use '../../styles/breakpoints' as *;
 
+  .lesson-flow {
+    background-color: var(--color-bg-skyblue);
+  }
+
+  .lesson-flow-title-lv2 {
+    text-align: center;
+  }
+
+  .lesson-flow-list {
+    display: grid;
+    gap: 18px;
+    width: fit-content;
+    padding: 0;
+    margin-inline: auto;
+  }
+
+  .lesson-flow-description-list {
+    display: grid;
+    gap: 4px;
+
+    dt {
+      color: var(--color-bg-blue);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: .02em;
+    }
+  }
+
+  .lesson-flow-number {
+    font-size: 21px;
+  }
+
+  @include mq() {
+    .lesson-flow-list {
+      gap: 20px;
+    }
+
+    .lesson-flow-description-list {
+      dt {
+        color: var(--color-bg-blue);
+        font-size: 20px;
+      }
+
+    }
+
+    .lesson-flow-number {
+      font-size: 23px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .lesson-flow-description-list {
+      grid-template-columns: 130px 1fr;
+      align-items: center;
+      gap: 32px;
+    }
+  }
 </style>

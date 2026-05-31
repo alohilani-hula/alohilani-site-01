@@ -57,7 +57,7 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
           </section>
         </div>
         <div class="about-parent-and-child-image">
-          <img src="../../../public/assets/images/about/pic-about-parent-and-child.webp" alt="" loading="lazy" decoding="async" width="1312" height="1058">
+          <img src="/assets/images/about/pic-about-parent-and-child.webp" alt="" loading="lazy" decoding="async" width="1312" height="1058">
         </div>
       </div><!-- /.l-section-body -->
     </div><!-- /.l-section -->
@@ -83,17 +83,20 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
   }
 
   .about-parent-and-child-title-lv3 {
-    grid-template-columns: 5px 1fr;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    align-items: center;
+    gap: 8px;
     font-size: 16px;
     font-weight: 700;
     line-height: 1.5;
 
     &::before {
-      width: 5px;
-      height: 23px;
-      margin-block-start: 3px;
-      background-color: var(--color-bg-skyblue);
+      content: "";
+      width: 4px;
+      height: 17px;
+      margin-block-end: 1px;
+      background-color: var(--color-bg-blue);
     }
   }
 
@@ -118,7 +121,7 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
       width: 4px;
       height: 4px;
       border-radius: 50%;
-      margin-block-start: 9px;
+      margin-block-start: 12px;
       background-color: var(--color-base);
     }
   }
@@ -136,11 +139,11 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
 
     .about-parent-and-child-title-lv3 {
       font-size: 18px;
-    }
+      gap: 10px;
 
-    .about-parent-and-child-item {
       &::before {
-        margin-block-start: 11px;
+        height: 19px;
+        margin-block-end: 2px;
       }
     }
   }

@@ -1,4 +1,5 @@
-<form class="c-form" action="https://ssgform.com/s/pWA8JEWy21wm" method="post" novalidate>
+<form class="c-form" action="https://ssgform.com/s/●●●●●" method="post" novalidate>
+
   <!-- honeypot（ボット対策） -->
   <div class="c-form-honeypot" aria-hidden="true">
     <label for="wana">Leave this field empty</label>
@@ -16,12 +17,30 @@
       id="name"
       name="name"
       autocomplete="name"
-      placeholder="例）山田太郎"
+      placeholder="例）山田 花子"
       class="c-form-input"
       required
       aria-describedby="name-error"
     />
     <p id="name-error" class="c-form-error" aria-live="polite"></p>
+  </div>
+
+  <!-- ふりがな -->
+  <div class="c-form-field">
+    <label for="ruby" class="c-form-label">
+      ふりがな
+      <span class="c-form-required" aria-label="必須">必須</span>
+    </label>
+    <input
+      type="text"
+      id="ruby"
+      name="ruby"
+      placeholder="例）やまだ はなこ"
+      class="c-form-input"
+      required
+      aria-describedby="ruby-error"
+    />
+    <p id="ruby-error" class="c-form-error" aria-live="polite"></p>
   </div>
 
   <!-- メールアドレス -->
@@ -105,6 +124,13 @@
           valueMissing: 'お名前を入力してください。',
         },
       },
+      ruby: {
+        input: form.querySelector('#ruby'),
+        error: form.querySelector('#ruby-error'),
+        messages: {
+          valueMissing: 'ふりがなを入力してください。',
+        },
+      },
       email: {
         input: form.querySelector('#email'),
         error: form.querySelector('#email-error'),
@@ -169,6 +195,7 @@
 
       return [
         validateField('name'),
+        validateField('ruby'),
         validateField('email'),
         validateField('message'),
         validatePrivacy(),
@@ -176,6 +203,7 @@
     };
 
     fields.name.input.addEventListener('blur', () => validateField('name'));
+    fields.ruby.input.addEventListener('blur', () => validateField('ruby'));
     fields.email.input.addEventListener('blur', () => validateField('email'));
     fields.message.input.addEventListener('blur', () => validateField('message'));
 

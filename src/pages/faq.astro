@@ -1,0 +1,118 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageKv from "../components/common/PageKv.astro";
+import PageTitleLv2 from "../components/common/PageTitleLv2.astro";
+// import Cta from "../components/common/Cta.astro";
+---
+
+<Layout
+  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  ogType="website"
+  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  noIndex="true"
+>
+  <main class="faq">
+    <div class="faq-kv">
+      <PageKv
+        pageTitle="よくあるご質問"
+        pageTitleImagePath="/assets/images/text/text-page-title-faq.svg"
+        pageTitleImageWidth="102"
+        pageTitleImageHeight="46"
+      />
+    </div>
+
+    <section class="faq-content">
+      <div class="l-container-s">
+        <div class="l-section">
+          <div class="faq-title-lv2">
+            <PageTitleLv2 pageTitle="よくあるご質問"/>
+          </div>
+          <div class="l-section-body">
+            <ul class="c-faq-list">
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>ダンス未経験でも参加できますか？</dt>
+                  <dd>
+                    <span>はい。現在通われている生徒様の中にも、未経験からスタートした方がたくさんいらっしゃいます。<br>基礎から丁寧にサポートしますので、初めての方も安心してご参加ください。</span>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>体が硬いのですが大丈夫ですか？</dt>
+                  <dd>
+                    <span>問題ありません。<br>無理なく体を動かしながらレッスンを行いますので、ご自身のペースで参加していただけます。</span>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>老後の楽しみとして、今からでも始められますか？</dt>
+                  <dd>
+                    <span>はい。アロヒラニには幅広い年代の方が在籍しています。<br>年齢に関係なく、それぞれのペースでフラを楽しんでいただけます。</span>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>小さな子共を同伴して参加することはできますか？</dt>
+                  <dd>
+                    <span>はい、大丈夫です。<br>親子フラでも、ワヒネ・クプナ（大人）クラスでも、小さなお子様を連れてご参加いただけます。<br>スタジオはクッションフロアのワンフロア空間ですので、お子様はスタジオ内で遊びながらお待ちいただけます。</span>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>ケイキ（子供）クラスのレッスン中、保護者が待てる場所はありますか？</dt>
+                  <dd>
+                    <span>はい。スタジオ内でお待ちいただけます。<br>レッスンの様子を見学しながらお待ちいただくことも可能ですし、一度外出していただき、終了時間にお戻りいただくこともできます。</span>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>レッスンには何を持参すればいいですか？</dt>
+                  <dd>
+                    <span>Tシャツ、タオル、お飲み物、パウスカートをご持参ください。<br>初回体験レッスン時には、パウスカートを貸し出しいたします。</span>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>イベントや発表会の参加は必須ですか？ 衣装代等の費用が心配です。</dt>
+                  <dd>
+                    <span>イベント出演は自由です。ご自身の癒しの時間としてフラを楽しみたいという方、また目標を持ってフラを学びたい方、それぞれのご自身のスタイルで大丈夫です。<br>イベント参加の場合は、イベントに応じて出演費がかかりますが、高額になることはありません。<br>衣装を貸し出ししたり、皆さんで相談しながら工夫して、できるだけコストがかからないようにしていますので、ご安心ください。</span>
+                  </dd>
+                </dl>
+              </li>
+              <li class="c-faq-item">
+                <dl class="c-faq-description-list">
+                  <dt>振替レッスンはできますか？</dt>
+                  <dd>
+                    <span>同月、および翌月に限り可能です。<br>日程の調整が難しい場合はZoomレッスンに振り替えることも可能です。</span>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </div><!-- /.l-section-body -->
+        </div><!-- /.l-section -->
+      </div><!-- /.l-container-s -->
+    </section>
+
+  </main>
+
+  <!-- cta -->
+  <!-- <Cta /> -->
+</Layout>
+
+<style lang="scss">
+  @use '../styles/breakpoints' as *;
+
+  .faq {
+    background-color: var(--color-bg-skyblue);
+  }
+
+  .faq-title-lv2 {
+    text-align: center;
+  }
+</style>

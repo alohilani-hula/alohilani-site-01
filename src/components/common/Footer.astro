@@ -4,9 +4,8 @@
     <div class="footer-content">
       <div class="footer-logo">
         <a href="/">
-          <img src="/assets/images/global/logo-white.svg" alt="鈴鹿Web制作" loading="lazy" decoding="async" width="238" height="32">
+          <img src="/assets/images/global/logo-white.webp" alt="Ka Pā Hula O Alohilani（カ・パー・フラ・オ・アロヒラニ）" loading="lazy" decoding="async" width="532" height="94">
         </a>
-        <p class="footer-logo-text">埼玉県所沢市を拠点に、<br>ホームページ制作を行っています</p>
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">
         <ul class="footer-nav-list">
@@ -14,34 +13,49 @@
             <a href="/">ホーム</a>
           </li>
           <li class="footer-nav-item">
-            <a href="/contact">お問い合わせ</a>
+            <a href="/about">アロヒラニについて</a>
           </li>
           <li class="footer-nav-item">
-            <a href="/privacy-policy">プライバシーポリシー</a>
+            <a href="/lesson">レッスン紹介</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="/voice">生徒様の声</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="/faq">よくあるご質問</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="/access">アクセス</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="/trial-lesson">体験レッスンのご案内</a>
+          </li>
+          <li class="footer-nav-item">
+            <a href="/contact">お問い合わせ</a>
           </li>
         </ul>
       </nav>
       <div class="footer-links">
+        <div class="footer-link">
+          <a href="/privacy-policy">プライバシーポリシー</a>
+        </div>
         <ul class="footer-sns-list">
           <li class="footer-sns-item">
-            <a href="https://x.com/suzu_shika_web" target="_blank" rel="noopener noreferrer">
-              <img src="/assets/images/global/icon-x.svg" alt="X (Twitter)" loading="lazy" decoding="async" width="24" height="24">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <img src="/assets/images/global/icon-line.svg" alt="LINE" loading="lazy" decoding="async" width="24" height="24">
             </a>
           </li>
           <li class="footer-sns-item">
-            <a href="https://www.instagram.com/suzu_shika_web/" target="_blank" rel="noopener noreferrer">
+            <a href="#" target="_blank" rel="noopener noreferrer">
               <img src="/assets/images/global/icon-instagram.svg" alt="Instagram" loading="lazy" decoding="async" width="24" height="24">
             </a>
           </li>
         </ul>
-        <div class="footer-blog">
-          <a href="https://blog.suzu-shika.com/" target="_blank" rel="noopener noreferrer">技術ブログ<span class="u-visually-hidden">（新しいタブで開きます）</span></a>
-        </div>
       </div>
     </div>
     <div class="footer-copyright">
-      <small aria-label="著作権 鈴鹿Web制作">
-        &copy; Suzu-Shika Web Production
+      <small aria-label="著作権 カ・パー・フラ・オ・アロヒラニ">
+        &copy; 2026 Ka Pā Hula O Alohilan
       </small>
     </div>
   </div><!-- /.l-container -->
@@ -114,33 +128,22 @@
     color: var(--color-white);
   }
 
-  .footer-content {
-    display: grid;
-    justify-items: center;
-    gap: 56px;
-  }
-
   .footer-logo {
     display: grid;
-    justify-items: center;
-    gap: 32px;
+    justify-content: center;
 
     img {
-      max-width: 179px;
+      max-width: 236px;
     }
-  }
-
-  .footer-logo-text {
-    font-size: 14px;
-    text-align: center;
   }
 
   .footer-nav-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 8px 24px;
+    gap: 12px 24px;
     padding: 0;
+    margin-block-start: 80px;
   }
 
   .footer-nav-item {
@@ -148,7 +151,6 @@
       display: inline-block;
       padding-block: 8px;
       font-size: 14px;
-      font-weight: 700;
       line-height: 1;
     }
   }
@@ -157,44 +159,40 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 8px;
+    margin-block-start: 80px;
+  }
+
+  .footer-link {
+    a {
+      display: inline-block;
+      padding-block: 8px;
+      font-size: 14px;
+      line-height: 1;
+    }
   }
 
   .footer-sns-list {
     display: flex;
-    gap: 24px;
+    gap: 8px;
     padding: 0;
   }
 
   .footer-sns-item {
-    img {
-      width: 28px;
-    }
-  }
-
-  .footer-blog {
     a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding-block: 8px;
-      font-size: 14px;
-      line-height: 1;
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+    }
 
-      &::after {
-        content: "";
-        width: 15px;
-        height: 13px;
-        background-image: url(/assets/images/global/icon-external-link-white.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-      }
+    img {
+      width: 24px;
     }
   }
 
   .footer-copyright {
-    margin-block-start: 24px;
+    margin-block-start: 32px;
     text-align: center;
 
     small {
@@ -204,62 +202,38 @@
   }
 
   @include mq() {
-    .footer-content {
-      grid-template-columns: auto auto;
-      grid-template-rows: auto auto;
-      justify-items: self-start;
-      gap: 80px 40px;
+    .footer {
+      padding-block: 100px 32px;
     }
 
     .footer-logo {
-      justify-items: self-start;
-      gap: 12px;
+      justify-content: start;
 
       img {
-        max-width: 238px;
+        max-width: 266px;
       }
-    }
-
-    .footer-logo-text {
-      font-size: 12px;
-      text-align: left;
-
-      br {
-        display: none;
-      }
-    }
-
-    .footer-nav {
-      grid-column: 1 / 2;
     }
 
     .footer-nav-list {
-      gap: clamp(24px, calc(32 / 1024 * 100vw) ,32px);
+      justify-content: flex-start;
+      gap: 12px 32px;
     }
 
     .footer-nav-item {
       a {
         font-size: 16px;
-        font-weight: 400;
       }
     }
 
     .footer-links {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-      justify-self: end;
       flex-direction: row;
-      gap: 24px;
-    }
-
-    .footer-sns-item {
-      img {
-        width: 24px;
-      }
+      gap: 16px;
+      margin-block-start: 72px;
     }
 
     .footer-copyright {
-      margin-block-start: 120px;
+      margin-block-start: 16px;
+      text-align: left;
     }
   }
 

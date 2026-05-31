@@ -11,7 +11,7 @@ const { buttonUrl, buttonText, buttonAriaLabel, buttonTarget } = Astro.props;
   .c-button {
     display: inline-block;
     padding-block: 9px;
-    padding-inline: calc(16px + 16px + 8px) 16px;
+    padding-inline: 16px calc(16px + 16px + 8px);
     border-radius: 100px;
     background-color: var(--color-main);
     color: var(--color-white);
@@ -32,7 +32,7 @@ const { buttonUrl, buttonText, buttonAriaLabel, buttonTarget } = Astro.props;
       height: 16px;
       border-radius: 50%;
       background-color: var(--color-white);
-      left: 16px;
+      right: 16px;
     }
 
     &::after {
@@ -42,25 +42,25 @@ const { buttonUrl, buttonText, buttonAriaLabel, buttonTarget } = Astro.props;
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center center;
-      left: calc(16px + 6px);
+      right: calc(16px + 5px);
     }
   }
 
   @include mq() {
     .c-button {
       padding-block: 16px;
-      padding-inline: calc(24px + 20px + 16px) 24px;
+      padding-inline: 24px calc(24px + 20px + 16px);
 
       &::before {
         width: 22px;
         height: 22px;
-        left: 24px;
+        right: 24px;
       }
 
       &::after {
         width: 7px;
         height: 12px;
-        left: calc(24px + 8px);
+        right: calc(24px + 7px);
       }
     }
   }

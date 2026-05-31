@@ -57,7 +57,7 @@ import Button from "../common/Button.astro";
         <div class="top-voice-btn">
           <Button
           buttonText="生徒様の声をもっと見る"
-          buttonUrl="/lesson"
+          buttonUrl="/voice"
         />
         </div>
       </div><!-- /.l-section-body -->
@@ -69,7 +69,7 @@ import Button from "../common/Button.astro";
   @use '../../styles/breakpoints' as *;
 
   .top-voice {
-    background-image: url(../../../public/assets/images/top/bg-top-voice.webp);
+    background-image: url(/assets/images/top/bg-top-voice.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -99,6 +99,7 @@ import Button from "../common/Button.astro";
     display: grid;
     gap: .5em;
     margin-block-start: 1em;
+    line-height: 2;
   }
 
   .top-voice-name {

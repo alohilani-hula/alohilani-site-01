@@ -1,0 +1,360 @@
+---
+import TopTitleLv2 from "./TopTitleLv2.astro";
+import Button from "../common/Button.astro";
+---
+
+<section class="top-trial-lesson">
+  <div class="l-container-s">
+    <div class="l-section">
+      <div class="top-trial-lesson-title-lv2">
+        <TopTitleLv2
+          title="体験レッスンのご案内"
+          titleClass="c-top-title-lv2"
+          titleImagePath="/assets/images/text/text-section-title-trial-lesson.svg"
+          titleImageWidth="317"
+          titleImageHeight="46"
+        />
+      </div>
+      <div class="l-section-body">
+        <p class="top-trial-lesson-lead">アロヒラニでは、体験レッスンを受け付けています。<br>初心者の方や親子で参加したい方も大歓迎。<br>まずはお気軽に体験レッスンへお越しください。</p>
+        <div class="top-trial-lesson-cards">
+          <section class="top-trial-lesson-card">
+            <h3 class="top-trial-lesson-title-lv3">体験レッスン料</h3>
+            <dl class="top-trial-lesson-description-list">
+              <div class="top-trial-lesson-description-item">
+                <dt>大人</dt>
+                <dd>1,000円</dd>
+              </div>
+              <div class="top-trial-lesson-description-item">
+                <dt>子供</dt>
+                <dd>500円</dd>
+              </div>
+              <div class="top-trial-lesson-description-item">
+                <dt>個人レッスン</dt>
+                <dd>1,500円</dd>
+              </div>
+            </dl>
+          </section>
+          <section class="top-trial-lesson-card">
+            <h3 class="top-trial-lesson-title-lv3">体験時の持ち物</h3>
+            <div class="top-trial-lesson-content">
+              <ul class="top-trial-lesson-list">
+                <li class="top-trial-lesson-item">Tシャツ</li>
+                <li class="top-trial-lesson-item">タオル</li>
+                <li class="top-trial-lesson-item">飲み物</li>
+                <li class="top-trial-lesson-item">パウスカートの貸し出しありあり</li>
+              </ul>
+            </div>
+          </section>
+          <section class="top-trial-lesson-card">
+            <h3 class="top-trial-lesson-title-lv3">こんな方にピッタリ</h3>
+            <div class="top-trial-lesson-content">
+              <ul class="top-trial-lesson-list">
+                <li class="top-trial-lesson-item">初心者の方</li>
+                <li class="top-trial-lesson-item">親子でフラを楽しみたい方</li>
+                <li class="top-trial-lesson-item">経験者の方も歓迎</li>
+              </ul>
+            </div>
+          </section>
+        </div>
+        <section class="top-trial-lesson-flow">
+          <h3 class="top-trial-lesson-flow-title-lv3">体験レッスンの流れ</h3>
+          <ol class="top-trial-lesson-flow-list">
+            <li class="top-trial-lesson-flow-item">
+              <div class="top-trial-lesson-flow-heading">
+                <span class="top-trial-lesson-flow-number" aria-hidden="true">01</span>
+                <h4 class="top-trial-lesson-flow-title-lv4">お申し込み</h4>
+              </div>
+              <p class="top-trial-lesson-flow-text">申し込みフォームからご希望クラスをご連絡ください。</p>
+            </li>
+            <li class="top-trial-lesson-flow-item">
+              <div class="top-trial-lesson-flow-heading">
+                <span class="top-trial-lesson-flow-number" aria-hidden="true">02</span>
+                <h4 class="top-trial-lesson-flow-title-lv4">ご連絡</h4>
+              </div>
+              <p class="top-trial-lesson-flow-text">1〜2日以内にメールにてご連絡します。</p>
+            </li>
+            <li class="top-trial-lesson-flow-item">
+              <div class="top-trial-lesson-flow-heading">
+                <span class="top-trial-lesson-flow-number" aria-hidden="true">03</span>
+                <h4 class="top-trial-lesson-flow-title-lv4">体験当日</h4>
+              </div>
+              <p class="top-trial-lesson-flow-text">動きやすい服装でお越しください。</p>
+            </li>
+          </ol>
+        </section>
+        <div class="top-trial-lesson-btn">
+          <Button
+          buttonText="まずは体験レッスンへ"
+          buttonUrl="/trial-lesson"
+        />
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .top-trial-lesson-lead {
+    font-size: 16px;
+    letter-spacing: .02em;
+    line-height: 1.85;
+  }
+
+  .top-trial-lesson-cards {
+    display: grid;
+    gap: 24px;
+    margin-block-start: 32px;
+  }
+
+  .top-trial-lesson-card {
+    padding-block: 24px;
+    padding-inline: 24px;
+    border-radius: 10px;
+    background-color: var(--color-bg-skyblue);
+  }
+
+  .top-trial-lesson-title-lv3 {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      width: 20px;
+      height: 20px;
+      margin-block-end: 1px;
+      background-image: url(../../../public/assets/images/global/icon-hibiscus.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+
+  .top-trial-lesson-description-list {
+    display: grid;
+    gap: 6px;
+    margin-block-start: 12px;
+  }
+
+  .top-trial-lesson-description-item {
+    display: flex;
+    gap: 1em;
+    font-size: 16px;
+
+    dt {
+      flex: 100px 0 0;
+      font-weight: 700;
+    }
+  }
+
+  .top-trial-lesson-list {
+    display: grid;
+    gap: 6px;
+    padding: 0;
+    margin-block-start: 12px;
+    font-size: 16px;
+  }
+
+  .top-trial-lesson-item {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 8px;
+    padding-inline-start: 8px;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-block-start: 12px;
+      background-color: var(--color-main);
+    }
+  }
+
+  .top-trial-lesson-flow {
+    margin-block-start: 48px;
+  }
+
+  .top-trial-lesson-flow-title-lv3 {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 21px;
+      background-color: var(--color-main);
+    }
+  }
+
+  .top-trial-lesson-flow-list {
+    display: grid;
+    gap: 24px;
+    padding: 0;
+    margin-block-start: 24px;
+  }
+
+  .top-trial-lesson-flow-item {
+    position: relative;
+
+    &:nth-child(1)::before,
+    &:nth-child(2)::before {
+      content: "";
+      width: 2px;
+      background-color: var(--color-bg-blue);
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      z-index: -1;
+    }
+
+    &:nth-child(1)::before {
+      height: 120px;
+    }
+
+    &:nth-child(2)::before {
+      height: 105px;
+    }
+  }
+
+  .top-trial-lesson-flow-heading {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .top-trial-lesson-flow-number {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-bg-blue);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1;
+  }
+
+  .top-trial-lesson-flow-title-lv4 {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .top-trial-lesson-flow-text {
+    padding-inline-start: 48px;
+  }
+
+  .top-trial-lesson-btn {
+    margin-block-start: 64px;
+    text-align: center;
+  }
+
+  @include mq() {
+    .top-trial-lesson-lead {
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .top-trial-lesson-cards {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      margin-block-start: 48px;
+    }
+
+    .top-trial-lesson-card {
+      padding-block: 32px;
+      padding-inline: 32px;
+    }
+
+    .top-trial-lesson-title-lv3 {
+      grid-template-columns: 22px 1fr;
+      gap: 10px;
+      font-size: 20px;
+
+      &::before {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    .top-trial-lesson-description-list {
+      gap: 8px;
+      margin-block-start: 14px;
+    }
+
+    .top-trial-lesson-list {
+      gap: 8px;
+      margin-block-start: 14px;
+    }
+
+    .top-trial-lesson-flow {
+      margin-block-start: 56px;
+    }
+
+    .top-trial-lesson-flow-title-lv3 {
+      gap: 12px;
+      font-size: 24px;
+
+      &::before {
+        height: 25px;
+      }
+    }
+
+    .top-trial-lesson-flow-list {
+      display: grid;
+      gap: 32px;
+      padding: 0;
+      margin-block-start: 32px;
+    }
+
+    .top-trial-lesson-flow-item {
+      &:nth-child(1)::before,
+      &:nth-child(2)::before {
+        left: 19px;
+      }
+    }
+
+    .top-trial-lesson-flow-heading {
+      grid-template-columns: 40px 1fr;
+      gap: 24px;
+    }
+
+    .top-trial-lesson-flow-number {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+    }
+
+    .top-trial-lesson-flow-title-lv4 {
+      font-size: 20px;
+    }
+
+    .top-trial-lesson-flow-text {
+      padding-inline-start: 64px;
+    }
+
+    .top-trial-lesson-btn {
+      margin-block-start: 80px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .top-trial-lesson-cards {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+    }
+  }
+</style>

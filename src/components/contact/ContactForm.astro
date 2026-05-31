@@ -1,0 +1,37 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+import ContactForm from "../common/ContactForm.astro";
+---
+
+<section class="contact-form">
+  <div class="contact-form-container l-container-s">
+    <div class="contact-form-section l-section">
+      <div class="contact-form-title-lv2">
+        <PageTitleLv2 pageTitle="お問い合わせ" />
+      </div>
+      <div class="l-section-body">
+        <div class="contact-form-content">
+          <ContactForm />
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .contact-form-container {
+    @include mq() {
+      max-width: calc(800px + 80px * 2);
+    }
+  }
+
+  .contact-form-section {
+    padding-block-start: 0;
+  }
+
+  .contact-form-title-lv2 {
+    text-align: center;
+  }
+</style>

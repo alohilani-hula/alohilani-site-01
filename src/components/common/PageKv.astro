@@ -3,23 +3,47 @@ const { pageTitle, pageTitleImagePath, pageTitleImageWidth, pageTitleImageHeight
 ---
 
 <div class="c-page-kv">
-  <div class="l-container">
-    <div class="c-page-kv-heading">
-      <h1 class="c-page-kv-title-lv1">{pageTitle}</h1>
-      <div class="c-page-kv-image">
-        <img src={pageTitleImagePath} alt="" loading="eager" decoding="async" width={pageTitleImageWidth} height={pageTitleImageHeight}>
+  <div class="c-page-kv-bg">
+    <img src="/assets/images/global/bg-page-kv.webp" alt="" loading="eager" decoding="async" width="5120" height="400">
+  </div>
+  <div class="c-page-kv-content">
+    <div class="l-container">
+      <div class="c-page-kv-heading">
+        <h1 class="c-page-kv-title-lv1">{pageTitle}</h1>
+        <div class="c-page-kv-image">
+          <img src={pageTitleImagePath} alt="" loading="eager" decoding="async" width={pageTitleImageWidth} height={pageTitleImageHeight}>
+        </div>
       </div>
-    </div>
-  </div><!-- /.l-container -->
+    </div><!-- /.l-container -->
+  </div>
 </div>
 
 <style is:global lang="scss">
   @use '../../styles/breakpoints' as *;
 
   .c-page-kv {
-    padding-block: 64px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 200px;
+    align-items: center;
     margin-block-start: 60px;
-    background-color: var(--color-bg-skyblue);
+  }
+
+  .c-page-kv-bg {
+    grid-column: 1 / -1;
+    grid-row: 1;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      object-position: right center;
+    }
+  }
+
+  .c-page-kv-content {
+    grid-column: 1 / -1;
+    grid-row: 1;
   }
 
   .c-page-kv-heading {
@@ -44,8 +68,17 @@ const { pageTitle, pageTitleImagePath, pageTitleImageWidth, pageTitleImageHeight
 
   @include mq() {
     .c-page-kv {
-      padding-block: 80px;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: 300px;
+      align-items: center;
       margin-block-start: 80px;
+    }
+
+    .c-page-kv-bg {
+      img {
+        height: 300px;
+      }
     }
 
     .c-page-kv-heading {

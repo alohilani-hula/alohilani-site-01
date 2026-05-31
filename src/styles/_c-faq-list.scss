@@ -22,7 +22,7 @@
 
 .c-faq-description-list {
   display: grid;
-  gap: 1em;
+  gap: 16px;
 
   dt {
     padding-inline-start: calc(23px + 8px);
@@ -53,8 +53,17 @@
   }
 
   dd {
-    max-width: 720px;
-    padding-inline-start: calc(23px + 8px);
+    padding-block-start: 16px;
+    background-image : linear-gradient(to right, #CCAD8F, #CCAD8F 2px, transparent 2px, transparent 10px);
+    background-size: 10px 2px;
+    background-position: left top;
+    background-repeat: repeat-x;
+
+    span {
+      display: block;
+      max-width: 720px;
+    }
+    // padding-inline-start: calc(23px + 8px);
   }
 }
 
@@ -69,6 +78,7 @@
   }
 
   .c-faq-description-list {
+    gap: 20px;
     dt {
       padding-inline-start: calc(25px + 12px);
       font-size: 18px;
@@ -80,7 +90,8 @@
     }
 
     dd {
-      padding-inline-start: calc(25px + 12px);
+      padding-block-start: 20px;
+      // padding-inline-start: calc(25px + 12px);
     }
   }
 }

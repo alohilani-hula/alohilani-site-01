@@ -15,8 +15,8 @@ const { logo, logoAlt } = Astro.props;
           alt={logoAlt}
           loading="eager"
           decoding="async"
-          width="178"
-          height="24"
+          width="266"
+          height="47"
           fetchpriority="high"
         />
       </a>
@@ -40,15 +40,18 @@ const { logo, logoAlt } = Astro.props;
             <a href="/lesson">レッスン紹介</a>
           </li>
           <li class="header-nav-item">
-            <a href="#">よくあるご質問</a>
+            <a href="/voice">生徒様の声</a>
           </li>
           <li class="header-nav-item">
-            <a href="#">お問い合わせ</a>
+            <a href="/contact">お問い合わせ</a>
+          </li>
+          <li class="header-nav-item">
+            <a href="/trial-lesson">体験レッスン<br>申し込み</a>
           </li>
         </ul>
       </nav>
     </div>
-    <a href="/contact" class="header-contact">お問い合わせ</a>
+    <a href="/trial-lesson" class="header-contact">体験申込</a>
   </div><!-- /.header-container.l-container -->
 </header>
 
@@ -107,7 +110,7 @@ const { logo, logoAlt } = Astro.props;
     align-items: center;
     width: 100%;
     height: 80px;
-    background-color: var(--color-white);
+    background-color: var(--color-bg-base);
     box-shadow: 0 2px 8px 0 rgb(0 0 0 / .15);
     position: fixed;
     top: 0;
@@ -122,8 +125,9 @@ const { logo, logoAlt } = Astro.props;
   }
 
   .header-logo {
-    width: 100%;
-    max-width: 178px;
+    // width: 100%;
+    // max-width: 240px;
+    width: min(240px, calc(210 / 1024 * 100vw));
 
     a {
       display: block;
@@ -141,8 +145,7 @@ const { logo, logoAlt } = Astro.props;
   .header-nav-list {
     display: flex;
     align-items: center;
-    gap: 40px;
-    gap: clamp(34px, calc(34px / 1024px * 100vw), 40px);
+    gap: clamp(24px, calc(24px / 1024px * 100vw), 40px);
     padding: 0;
   }
 
@@ -152,7 +155,7 @@ const { logo, logoAlt } = Astro.props;
     a {
       display: block;
       padding-block: 8px;
-      font-size: clamp(15px, calc(15px / 1024px * 100vw), 16px);
+      font-size: clamp(14px, calc(14px / 1024px * 100vw), 16px);
     }
 
     &--home {
@@ -160,15 +163,20 @@ const { logo, logoAlt } = Astro.props;
     }
 
     &:last-child {
-      margin-inline-start: 16px;
+      // margin-inline-start: 12px;
+      margin-inline-start: min(10px, calc(8 / 1024 * 100vw));
 
       a {
         display: grid;
         place-items: center;
         height: 80px;
-        padding-inline: 40px;
+        // padding-inline: 32px;
+        padding-inline: min(40px, calc(32 / 1024 * 100vw));
         background-color: var(--color-main);
         color: var(--color-white);
+        font-weight: 700;
+        text-align: center;
+        line-height: 1.45;
       }
     }
   }
@@ -189,6 +197,7 @@ const { logo, logoAlt } = Astro.props;
     }
 
     .header-logo {
+      width: 210px;
       position: relative;
       z-index: 30;
     }
@@ -293,6 +302,10 @@ const { logo, logoAlt } = Astro.props;
           place-items: center;
           height: auto;
           padding-inline: 0;
+
+          br {
+            display: none;
+          }
         }
       }
     }
@@ -306,6 +319,7 @@ const { logo, logoAlt } = Astro.props;
       color: var(--color-white);
       font-size: 14px;
       font-weight: 700;
+      letter-spacing: .05em;
       line-height: 1.75;
     }
   }
@@ -320,7 +334,7 @@ const { logo, logoAlt } = Astro.props;
     }
 
     .header-logo {
-      max-width: 120px;
+      width: min(190px, calc(160 / 390 * 100vw));
     }
 
     .header-hamburger {

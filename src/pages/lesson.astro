@@ -4,6 +4,7 @@ import PageKv from "../components/common/PageKv.astro";
 import LessonOverview from "../components/lesson/LessonOverview.astro";
 import LessonStudio from "../components/lesson/LessonStudio.astro";
 import LessonFlow from "../components/lesson/LessonFlow.astro";
+import LessonSpecialCourse from "../components/lesson/LessonSpecialCourse.astro";
 // import Cta from "../components/common/Cta.astro";
 
 ---
@@ -14,14 +15,16 @@ import LessonFlow from "../components/lesson/LessonFlow.astro";
   description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
   noIndex="true"
 >
-  <main class="about">
-    <!-- about-kv -->
-    <PageKv
-      pageTitle="レッスン紹介"
-      pageTitleImagePath="/assets/images/text/text-page-title-lesson.svg"
-      pageTitleImageWidth="136"
-      pageTitleImageHeight="46"
-    />
+  <main class="lesson">
+    <!-- lesson-kv -->
+    <div class="lesson-kv">
+      <PageKv
+        pageTitle="レッスン紹介"
+        pageTitleImagePath="/assets/images/text/text-page-title-lesson.svg"
+        pageTitleImageWidth="136"
+        pageTitleImageHeight="46"
+      />
+    </div>
 
     <!-- lesson-overview -->
     <LessonOverview />
@@ -31,6 +34,9 @@ import LessonFlow from "../components/lesson/LessonFlow.astro";
 
     <!-- lesson-flow -->
     <LessonFlow />
+
+    <!-- lesson-special-course -->
+    <LessonSpecialCourse />
 
   </main>
 

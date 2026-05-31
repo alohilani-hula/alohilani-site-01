@@ -1,0 +1,203 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="trial-lesson-flow">
+  <div class="l-container-s">
+    <div class="l-section">
+      <div class="trial-lesson-flow-title-lv2">
+        <PageTitleLv2 pageTitle="体験レッスンの流れ" />
+      </div>
+      <div class="l-section-body">
+        <ol class="trial-lesson-flow-list">
+          <li class="trial-lesson-flow-item">
+            <div class="trial-lesson-flow-heading">
+              <span class="trial-lesson-flow-number trial-lesson-flow-number--01" aria-hidden="true">01</span>
+              <h4 class="trial-lesson-flow-title-lv4">お申し込み</h4>
+            </div>
+            <ul class="trial-lesson-flow-text">
+              <li class="trial-lesson-flow-text-item">下の予約フォームからご希望クラスをご連絡ください。</li>
+              <li class="trial-lesson-flow-text-item">体験する方の年齢、体験希望クラス、フラの経験の有無をご選択ください。<br>※対象年齢クラスでの体験となります。</li>
+            </ul>
+          </li>
+          <li class="trial-lesson-flow-item">
+            <div class="trial-lesson-flow-heading">
+              <span class="trial-lesson-flow-number trial-lesson-flow-number--02" aria-hidden="true">02</span>
+              <h4 class="trial-lesson-flow-title-lv4">ご連絡・お支払い</h4>
+            </div>
+            <ul class="trial-lesson-flow-text">
+              <li class="trial-lesson-flow-text-item">1〜2日以内にメールにてご連絡します。</li>
+              <li class="trial-lesson-flow-text-item">体験レッスン料は、予約時にPayPay送金、または当日現金にてお支払ください。</li>
+            </ul>
+          </li>
+          <li class="trial-lesson-flow-item">
+            <div class="trial-lesson-flow-heading">
+              <span class="trial-lesson-flow-number trial-lesson-flow-number--03" aria-hidden="true">03</span>
+              <h4 class="trial-lesson-flow-title-lv4">体験当日</h4>
+            </div>
+            <ul class="trial-lesson-flow-text">
+              <li class="trial-lesson-flow-text-item">動きやすい服装でお越しください。</li>
+              <li class="trial-lesson-flow-text-item">ハンドタオルとお飲み物をご持参ください。</li>
+              <li class="trial-lesson-flow-text-item">体験レッスンの前に、簡単なご案内とウォーミングアップを行います。</li>
+              <li class="trial-lesson-flow-text-item">ゆっくりサポートしますので、初めての方もご安心ください。</li>
+            </ul>
+          </li>
+        </ol>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .trial-lesson-flow {
+    background-color: var(--color-bg-skyblue);
+  }
+
+  .trial-lesson-flow-title-lv2 {
+    text-align: center;
+  }
+
+  .trial-lesson-flow-list {
+    display: grid;
+    gap: 24px;
+    width: fit-content;
+    padding: 0;
+    margin-inline: auto;
+  }
+
+  .trial-lesson-flow-item {
+    // position: relative;
+
+    // &:nth-child(1)::before,
+    // &:nth-child(3)::before {
+    //   content: "";
+    //   width: 2px;
+    //   background-color: var(--color-bg-blue);
+    //   position: absolute;
+    //   left: 15px;
+    //   z-index: 1;
+    // }
+
+    // &:nth-child(1)::before {
+    //   height: 120px;
+    //   top: 10px;
+    // }
+
+    // &:nth-child(3)::before {
+    //   height: 100px;
+    //   bottom: 10px;
+    // }
+  }
+
+  .trial-lesson-flow-heading {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .trial-lesson-flow-number {
+    display: grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--color-bg-blue);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    line-height: 1;
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 2px;
+      background-color: var(--color-bg-blue);
+      position: absolute;
+      left: 16px;
+    }
+
+    &--01::before {
+      height: 260px;
+      top: 32px;
+    }
+
+    &--02::before {
+      height: 120px;
+      top: 32px;
+    }
+
+    &--03::before {
+      height: 60px;
+      top: -58px;
+    }
+  }
+
+  .trial-lesson-flow-title-lv4 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .trial-lesson-flow-text {
+    display: grid;
+    gap: 4px;
+    padding-inline-start: 54px;
+    margin-block-start: 4px;
+  }
+
+  .trial-lesson-flow-text-item {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: .5em;
+    padding-inline-start: .5em;
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-block-start: 12px;
+      background-color: currentColor;
+    }
+  }
+
+  @include mq() {
+    .trial-lesson-flow-list {
+      display: grid;
+      gap: 32px;
+      padding: 0;
+    }
+
+    .trial-lesson-flow-item {
+      // &:nth-child(1)::before,
+      // &:nth-child(2)::before {
+      //   left: 19px;
+      // }
+    }
+
+    .trial-lesson-flow-heading {
+      grid-template-columns: 40px 1fr;
+      gap: 24px;
+    }
+
+    .trial-lesson-flow-number {
+      width: 40px;
+      height: 40px;
+      font-size: 16px;
+
+      &::before {
+        left: 19px;
+      }
+    }
+
+    .trial-lesson-flow-title-lv4 {
+      font-size: 20px;
+    }
+
+    .trial-lesson-flow-text {
+      padding-inline-start: 64px;
+    }
+  }
+</style>

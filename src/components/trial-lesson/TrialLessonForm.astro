@@ -1,0 +1,33 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+import ReservationForm from "../common/ReservationForm.astro";
+---
+
+<section class="trial-lesson-form">
+  <div class="trial-lesson-form-container l-container-s">
+    <div class="l-section">
+      <div class="trial-lesson-form-title-lv2">
+        <PageTitleLv2 pageTitle="体験レッスン予約" />
+      </div>
+      <div class=" l-section-body">
+        <div class="trial-lesson-form-content">
+          <ReservationForm />
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .trial-lesson-form-container {
+    @include mq() {
+      max-width: calc(800px + 80px * 2);
+    }
+  }
+
+  .trial-lesson-form-title-lv2 {
+    text-align: center;
+  }
+</style>

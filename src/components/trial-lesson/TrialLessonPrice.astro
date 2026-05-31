@@ -1,0 +1,120 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="trial-lesson-price">
+  <div class="l-container-s">
+    <div class="trial-lesson-price-section l-section">
+      <div class="trial-lesson-price-title-lv2">
+        <PageTitleLv2 pageTitle="初回体験レッスン料" />
+      </div>
+      <div class="trial-lesson-price-section-body l-section-body">
+        <div class="trial-lesson-price-content">
+          <dl class="trial-lesson-price-description-list">
+            <div class="trial-lesson-price-description-item">
+              <dt>大人</dt>
+              <dd>1,000円</dd>
+            </div>
+            <div class="trial-lesson-price-description-item">
+              <dt>子供<span>（小学生まで）</span></dt>
+              <dd><span>500円</span></dd>
+            </div>
+            <div class="trial-lesson-price-description-item">
+              <dt>個人レッスン</dt>
+              <dd>1,500円</dd>
+            </div>
+          </dl>
+          <div class="trial-lesson-price-payment">
+            <p class="trial-lesson-price-note">※以下の方法にてお支払いください。</p>
+            <ul class="trial-lesson-price-list">
+              <li class="trial-lesson-price-item">予約時にPayPay送金</li>
+              <li class="trial-lesson-price-item">当日現金にてお支払い</li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .trial-lesson-price-section {
+    padding-block-start: 0;
+  }
+
+  .trial-lesson-price-title-lv2 {
+    text-align: center;
+  }
+
+  .trial-lesson-price-section-body {
+    max-width: 560px;
+    padding-block: 32px;
+    padding-inline: 24px;
+    border-radius: 10px;
+    margin-inline: auto;
+    background-color: var(--color-bg-beige);
+
+    @include mq() {
+      padding-block: 40px;
+    }
+  }
+
+  .trial-lesson-price-content {
+    width: fit-content;
+    margin-inline: auto;
+  }
+
+  .trial-lesson-price-description-list {
+    display: grid;
+    gap: 10px;
+  }
+
+  .trial-lesson-price-description-item {
+    display: flex;
+    gap: 40px;
+    gap: min(40px, calc(40 / 375 * 100vw));
+    gap: 24px;
+    gap: clamp(24px, calc(24 / 320 * 100vw), 40px);
+
+    dt {
+      flex: 150px 0 0;
+      font-weight: 700;
+    }
+
+    dd {
+      span {
+        margin-inline-start: 11px;
+      }
+    }
+  }
+
+  .trial-lesson-price-payment {
+    margin-block-start: 24px;
+    font-size: 14px;
+  }
+
+  .trial-lesson-price-list {
+    display: grid;
+    gap: 2px;
+    padding: 0;
+    margin-block-start: 4px;
+  }
+
+  .trial-lesson-price-item {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: .5em;
+    padding-inline-start: .5em;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-block-start: 9px;
+      background-color: currentColor;
+    }
+  }
+</style>

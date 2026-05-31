@@ -1,0 +1,173 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="lesson-special-course">
+  <div class="l-container-s">
+    <div class="l-section">
+      <div class="lesson-special-course-title-lv2">
+        <PageTitleLv2 pageTitle="特別レッスン" />
+      </div>
+      <div class="l-section-body">
+        <div class="lesson-special-course-cards">
+          <section class="lesson-special-course-card">
+            <h3 class="lesson-special-course-title-lv3">個人レッスン</h3>
+            <div class="lesson-special-course-body">
+              <div class="lesson-special-course-image lesson-special-course-image--personal-lesson">
+                <img src="/assets/images/lesson/pic-lesson-special-course-01.webp" alt="" loading="lazy" decoding="async" width="500" height="660">
+              </div>
+              <div class="lesson-special-course-description">
+                <p class="lesson-special-course-text">マンツーマンまたは少人数（生徒様2名まで）で行う特別レッスンです。</p>
+                <p class="lesson-special-course-text">内容はご希望に合わせてご相談いただけます。</p>
+                <ul class="lesson-special-course-list">
+                  <li class="lesson-special-course-item">初めての方：基本ステップ、姿勢を丁寧にマンツーマンで学びたい</li>
+                  <li class="lesson-special-course-item">経験者の方：課題曲を集中して練習したい、表現力を磨きたい</li>
+                  <li class="lesson-special-course-item">2人（お友達・ご夫婦・親子）で気軽にフラを楽しみたい</li>
+                  <li class="lesson-special-course-item">希望の曲だけ練習したい</li>
+                </ul>
+                <p class="lesson-special-course-text">など、ご希望に合わせたレッスンをおこないます。</p>
+                <p class="lesson-special-course-note">※内容、日時、料金についてはご相談ください。</p>
+              </div>
+            </div>
+          </section>
+          <section class="lesson-special-course-card">
+            <h3 class="lesson-special-course-title-lv3">1 day レッスン</h3>
+            <div class="lesson-special-course-body">
+              <div class="lesson-special-course-image">
+                <img src="/assets/images/lesson/pic-lesson-special-course-02.webp" alt="" loading="lazy" decoding="async" width="500" height="514">
+              </div>
+              <div class="lesson-special-course-description">
+                <p class="lesson-special-course-text">次のような方に向けた、1日で1曲を学ぶレッスンです。</p>
+                <ul class="lesson-special-course-list">
+                  <li class="lesson-special-course-item">通常レッスンに通うのが難しい方</li>
+                  <li class="lesson-special-course-item">遠方にお住まいの方</li>
+                  <li class="lesson-special-course-item">短時間で1曲しっかり踊れるようになりたい方</li>
+                  <li class="lesson-special-course-item">希望曲を1日でマスターしたい方</li>
+                </ul>
+                <p class="lesson-special-course-note">※内容、時間、料金についてはご相談ください。</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .lesson-special-course-title-lv2 {
+    text-align: center;
+  }
+
+  .lesson-special-course-cards {
+    display: grid;
+    gap: 40px;
+  }
+
+  .lesson-special-course-title-lv3 {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    align-items: center;
+    gap: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 23px;
+      background-color: var(--color-bg-blue);
+    }
+  }
+
+  .lesson-special-course-body {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 24px;
+    margin-block-start: 20px;
+  }
+
+  .lesson-special-course-image {
+    max-width: 350px;
+
+    &--personal-lesson {
+      img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: center top;
+      }
+    }
+  }
+
+  .lesson-special-course-description {
+    display: grid;
+    align-content: start;
+    gap: .75em;
+  }
+
+  .lesson-special-course-list {
+    display: grid;
+    gap: .5em;
+    padding: 0;
+  }
+
+  .lesson-special-course-item {
+    padding-inline-start: calc(.5em + 4px + .5em);
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: currentColor;
+      position: absolute;
+      top: 12px;
+      left: .5em;
+    }
+  }
+
+  .lesson-special-course-note {
+    font-size: 12px;
+  }
+
+  @include mq() {
+    .lesson-special-course-cards {
+      gap: 80px;
+    }
+
+    .lesson-special-course-title-lv3 {
+      gap: 12px;
+      font-size: 24px;
+
+      &::before {
+        height: 27px;
+      }
+    }
+
+    .lesson-special-course-body {
+      flex-direction: row;
+      gap: 48px;
+      margin-block-start: 24px;
+    }
+
+    .lesson-special-course-image {
+      max-width: 100%;
+      width: min(350px, calc(350 / 1100 * 100vw));
+      flex-shrink: 0;
+
+      &--personal-lesson {
+        img {
+          aspect-ratio: initial;
+        }
+      }
+    }
+
+    .lesson-special-course-note {
+      font-size: 14px;
+    }
+  }
+</style>

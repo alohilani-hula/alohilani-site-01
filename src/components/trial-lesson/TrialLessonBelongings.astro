@@ -1,0 +1,83 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="trial-lesson-belongings">
+  <div class="l-container-s">
+    <div class="l-section">
+      <div class="trial-lesson-belongings-title-lv2">
+        <PageTitleLv2 pageTitle="体験レッスン時の持ち物" />
+      </div>
+      <div class="l-section-body">
+        <div class="trial-lesson-belongings-content">
+          <ul class="trial-lesson-belongings-list">
+            <li class="trial-lesson-belongings-item">
+              <div class="trial-lesson-belongings-image">
+                <img src="/assets/images/trial-lesson/illust-trial-lesson-belongings-01.webp" alt="Tシャツのイラスト" loading="eager" decoding="async" width="200" height="200">
+              </div>
+              <p class="trial-lesson-belongings-text">Tシャツ</p>
+            </li>
+            <li class="trial-lesson-belongings-item">
+              <div class="trial-lesson-belongings-image">
+                <img src="/assets/images/trial-lesson/illust-trial-lesson-belongings-02.webp" alt="タオルのイラスト" loading="eager" decoding="async" width="200" height="200">
+              </div>
+              <p class="trial-lesson-belongings-text">タオル</p>
+            </li>
+            <li class="trial-lesson-belongings-item">
+              <div class="trial-lesson-belongings-image">
+                <img src="/assets/images/trial-lesson/illust-trial-lesson-belongings-03.webp" alt="ペットボトルの水のイラスト" loading="eager" decoding="async" width="200" height="200">
+              </div>
+              <p class="trial-lesson-belongings-text">飲み物</p>
+            </li>
+          </ul>
+          <p class="trial-lesson-belongings-note">※パウスカートをお持ちでない方には<span>お貸しします。</span></p>
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .trial-lesson-belongings-title-lv2 {
+    text-align: center;
+  }
+
+  .trial-lesson-belongings-content {
+    max-width: 560px;
+    padding-block: 32px;
+    padding-inline: 24px;
+    border-radius: 10px;
+    margin-inline: auto;
+    background-color: var(--color-bg-beige);
+
+    @include mq() {
+      padding-block: 40px;
+    }
+  }
+
+  .trial-lesson-belongings-list {
+    display: flex;
+    justify-content: center;
+    gap: min(24px, calc(16px / 375px * 100vw));
+    padding: 0;
+  }
+
+  .trial-lesson-belongings-item {
+    display: grid;
+    gap: 8px;
+    flex: min(100px, calc(80px / 375px * 100vw)) 0 0;
+    text-align: center;
+  }
+
+  .trial-lesson-belongings-note {
+    margin-block-start: 24px;
+    font-size: 14px;
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
+  }
+</style>

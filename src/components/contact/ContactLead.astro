@@ -1,0 +1,201 @@
+---
+// import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="contact-lead">
+  <div class="contact-lead-container l-container-s">
+    <div class="l-section">
+      <h2 class="contact-lead-title-lv2">まずはお気軽に<br>お問い合わせください</h2>
+      <div class="contact-lead-section-body l-section-body">
+        <section class="contact-lead-section">
+          <h3 class="contact-lead-title-lv3">フラの出張レッスン・イベントのご相談も承ります</h3>
+          <p class="contact-lead-text">アロヒラニでは、通常レッスンのほか、幼稚園・保育園・学校・企業・福祉施設などへの出張レッスンやイベント出演のご相談も承っております。</p>
+          <p class="contact-lead-text">ご希望の人数や年齢層、開催目的に合わせて内容をご提案いたします。</p>
+        </section>
+        <section class="contact-lead-section">
+          <h3 class="contact-lead-title-lv3">こんなご相談に対応しています</h3>
+          <div class="contact-lead-cards">
+            <div class="contact-lead-card">
+              <h4 class="contact-lead-title-lv4">幼稚園・保育園・学校</h4>
+              <ul class="contact-lead-list">
+                <li class="contact-lead-item">行事や発表会でのフラ体験</li>
+                <li class="contact-lead-item">特別授業や文化祭でのワークショップ</li>
+              </ul>
+            </div>
+            <div class="contact-lead-card">
+              <h4 class="contact-lead-title-lv4">企業・団体</h4>
+              <ul class="contact-lead-list">
+                <li class="contact-lead-item">福利厚生イベント</li>
+                <li class="contact-lead-item">社内交流イベント</li>
+                <li class="contact-lead-item">リフレッシュプログラム</li>
+              </ul>
+            </div>
+            <div class="contact-lead-card">
+              <h4 class="contact-lead-title-lv4">シニア施設・福祉施設</h4>
+              <ul class="contact-lead-list">
+                <li class="contact-lead-item">レクリエーション活動</li>
+                <li class="contact-lead-item">健康づくり・リフレッシュ活動</li>
+              </ul>
+            </div>
+            <div class="contact-lead-card">
+              <h4 class="contact-lead-title-lv4">その他</h4>
+              <ul class="contact-lead-list">
+                <li class="contact-lead-item">3名様以上での新規クラス開講のご相談</li>
+                <li class="contact-lead-item">イベント出演のご依頼</li>
+                <li class="contact-lead-item">レッスン内容に関するご質問</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="contact-lead-section">
+          <h3 class="contact-lead-title-lv3">お気軽にお問い合わせください</h3>
+          <p class="contact-lead-text">フラダンスを通して、心と体をリフレッシュする時間をお届けします。</p>
+          <p class="contact-lead-text">「このような内容でも依頼できる？」<br>「対象年齢に合わせた内容は可能？」<br>というご相談も歓迎しております。</p>
+          <p class="contact-lead-text">まずはお気軽にお問い合わせください。</p>
+        </section>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container-s -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .contact-lead-title-lv2 {
+    color: var(--color-main);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.55;
+    text-align: center;
+  }
+
+  .contact-lead-section-body {
+    display: grid;
+    gap: 40px;
+  }
+
+  .contact-lead-title-lv3 {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 8px;
+    font-size: 20px;
+    line-height: 1.55;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 21px;
+      margin-block-start: 5px;
+      background-color: var(--color-bg-blue);
+    }
+  }
+
+  .contact-lead-text {
+    margin-block-start: 16px;
+  }
+
+  .contact-lead-cards {
+    display: grid;
+    gap: 24px;
+    margin-block-start: 16px;
+  }
+
+  .contact-lead-card {
+    padding-block: 24px;
+    padding-inline: 24px;
+    border-radius: 10px;
+    background-color: var(--color-bg-skyblue);
+  }
+
+  .contact-lead-title-lv4 {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 6px;
+    font-size: 18px;
+
+    &::before {
+      content: "";
+      width: 22px;
+      height: 22x;
+      background-image: url(/assets/images/global/icon-hibiscus.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+    }
+  }
+
+  .contact-lead-list {
+    display: grid;
+    gap: 4px;
+    margin-block-start: 8px;
+    padding: 0;
+  }
+
+  .contact-lead-item {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: .5em;
+    padding-inline-start: .5em;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-block-start: 12px;
+      background-color: currentColor;
+    }
+  }
+
+  @include mq() {
+    .contact-lead-container {
+      max-width: calc(800px + 80px * 2);
+    }
+
+    .contact-lead-title-lv2 {
+      font-size: 32px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .contact-lead-section-body {
+      gap: 48px;
+    }
+
+    .contact-lead-title-lv3 {
+      gap: 12px;
+      font-size: 24px;
+
+      &::before {
+        height: 25px;
+        margin-block-start: 6px;
+      }
+    }
+
+    .contact-lead-text {
+      margin-block-start: 20px;
+
+      & + & {
+        margin-block-start: 16px;
+      }
+    }
+
+    .contact-lead-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin-block-start: 24px;
+    }
+
+    .contact-lead-card {
+      padding-block: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .contact-lead-card {
+      padding-inline: 32px;
+    }
+  }
+</style>

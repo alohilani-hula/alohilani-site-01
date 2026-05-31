@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageKv from "../components/common/PageKv.astro";
+import TrialLessonBelongings from "../components/trial-lesson/TrialLessonBelongings.astro";
+import TrialLessonPrice from "../components/trial-lesson/TrialLessonPrice.astro";
+import TrialLessonFlow from "../components/trial-lesson/TrialLessonFlow.astro";
+import TrialLessonForm from "../components/trial-lesson/TrialLessonForm.astro";
+// import Cta from "../components/common/Cta.astro";
+---
+
+<Layout
+  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  ogType="website"
+  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  noIndex="true"
+>
+  <main class="trial-lesson">
+    <!-- trial-lesson-kv -->
+    <div class="trial-lesson--kv">
+      <PageKv
+        pageTitle="体験レッスンのご案内"
+        pageTitleImagePath="/assets/images/text/text-page-title-trial-lesson.svg"
+        pageTitleImageWidth="253"
+        pageTitleImageHeight="46"
+      />
+    </div>
+
+    <!-- trial-lesson-belongings -->
+    <TrialLessonBelongings />
+
+    <!-- trial-lesson-price -->
+    <TrialLessonPrice />
+
+    <!-- trial-lesson-flow -->
+    <TrialLessonFlow />
+
+    <!-- trial-lesson-form -->
+    <TrialLessonForm />
+
+  </main>
+
+  <!-- cta -->
+  <!-- <Cta /> -->
+</Layout>
