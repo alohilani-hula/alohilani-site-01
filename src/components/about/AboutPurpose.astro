@@ -1,0 +1,200 @@
+---
+import PageTitleLv2 from "../common/PageTitleLv2.astro";
+---
+
+<section class="about-purpose">
+  <div class="l-container">
+    <div class="about-purpose-section l-section">
+      <div class="about-purpose-title-lv2">
+        <PageTitleLv2 pageTitle="アロヒラニという場所" />
+      </div>
+      <div class="l-section-body">
+        <div class="about-purpose-wrapper">
+          <section class="about-purpose-content">
+            <h3 class="about-purpose-title-lv3">自分を大切にする時間を</h3>
+            <div class="about-purpose-description">
+              <p class="about-purpose-text">仕事や家事、子育てに追われる毎日の中で、自分自身と向き合う時間を持つことは簡単なことではありません。<br>アロヒラニでは、フラを通して心と体をリフレッシュし、自分らしく過ごせる時間を大切にしています。</p>
+              <p class="about-purpose-text">レッスンを重ねる中で生まれるのは、技術の成長だけではありません。</p>
+              <ul class="about-purpose-list">
+                <li class="about-purpose-item">同じ時間を共有する仲間との出会い</li>
+                <li class="about-purpose-item">励まし合いながら挑戦する経験</li>
+                <li class="about-purpose-item">そして、その後に待っている達成感や喜び</li>
+              </ul>
+              <p class="about-purpose-text">なども、フラの大きな魅力です。</p>
+            </div>
+          </section>
+          <section class="about-purpose-content">
+            <h3 class="about-purpose-title-lv3">子どもたちの成長にも</h3>
+            <div class="about-purpose-description">
+              <p class="about-purpose-text">子どもたちはフラを通して、</p>
+              <ul class="about-purpose-list">
+                <li class="about-purpose-item">リズム感</li>
+                <li class="about-purpose-item">表現力</li>
+                <li class="about-purpose-item">協調性</li>
+                <li class="about-purpose-item">挑戦する気持ち</li>
+              </ul>
+              <p class="about-purpose-text">を自然に育んでいきます。</p>
+              <p class="about-purpose-text">アロヒラニでは、子どもたちが楽しみながら学び、成長できる環境づくりを大切にしています。</p>
+            </div>
+          </section>
+          <section class="about-purpose-content">
+            <h3 class="about-purpose-title-lv3">アロヒラニは、フラを学ぶだけの場所ではありません</h3>
+            <div class="about-purpose-description">
+              <p class="about-purpose-text">大人も子どもも、それぞれが新しい挑戦を楽しみ、成長し続けられるコミュニティでありたいと考えています。</p>
+            </div>
+          </section>
+        </div>
+      </div><!-- /.l-section-body -->
+    </div><!-- /.l-section -->
+  </div><!-- /.l-container -->
+</section>
+
+<style lang="scss">
+  @use '../../styles/breakpoints' as *;
+
+  .about-purpose {
+    overflow: hidden;
+    background-image: url(/assets/images/about/bg-about-purpose.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: "";
+      width: 200px;
+      height: 160px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+      opacity: .3;
+      position: absolute;
+      z-index: 1;
+    }
+
+    &::before {
+      background-image: url(../../../public/assets/images/global/icon-hibiscus-02.svg);
+      bottom: -10px;
+      left: -10px;
+    }
+
+    &::after {
+      background-image: url(../../../public/assets/images/global/icon-hibiscus-03.svg);
+      top: -10px;
+      right: -20px;
+    }
+  }
+
+  .about-purpose-section {
+    position: relative;
+    z-index: 10;
+  }
+
+  .about-purpose-wrapper {
+    display: grid;
+    gap: 40px;
+    max-width: 720px;
+  }
+
+  .about-purpose-title-lv3 {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 18px;
+      margin-block-start: 3px;
+      background-color: var(--color-bg-blue);
+    }
+  }
+
+  .about-purpose-description {
+    display: grid;
+    gap: 1em;
+    margin-block-start: 1em;
+  }
+
+  .about-purpose-list {
+    padding: 0;
+  }
+
+  .about-purpose-item {
+    display: grid;
+    grid-template-columns: 4px 1fr;
+    gap: .5em;
+    padding-inline-start: .5em;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      margin-block-start: 12px;
+      background-color: var(--color-base);
+    }
+  }
+
+  .about-purpose-image {
+    img {
+      max-width: 480px;
+    }
+  }
+
+  @include mq() {
+    .about-purpose {
+      &::before,
+      &::after {
+        width: 300px;
+        height: 240px;
+        transform: translateX(-50%);
+      }
+
+      &::before {
+        left: calc(50% - 320px);
+      }
+
+      &::after {
+        top: -20px;
+        right: auto;
+        left: calc(50% + 320px);
+      }
+    }
+
+    .about-purpose-title-lv3 {
+      font-size: 18px;
+      gap: 10px;
+
+      &::before {
+        height: 19px;
+        margin-block-end: 2px;
+      }
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .about-purpose {
+      &::before,
+      &::after {
+        width: 350px;
+        height: 280px;
+      }
+
+      &::before {
+        bottom: -30px;
+        left: calc(50% - 480px);
+      }
+
+      &::after {
+        top: -40px;
+        right: auto;
+        left: calc(50% + 480px);
+      }
+    }
+  }
+</style>

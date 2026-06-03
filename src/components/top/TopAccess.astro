@@ -17,7 +17,7 @@ import Button from "../common/Button.astro";
       </div>
       <div class="l-section-body">
         <div class="top-access-list">
-          <a href="#" target="_blank" rel="noopener noreferrer" class="top-access-item">
+          <a href="https://maps.app.goo.gl/CRyJ6XFJVcyCu1qVA" target="_blank" rel="noopener noreferrer" class="top-access-item">
             <h3 class="top-access-title-lv3">江古田教室</h3>
             <div class="top-access-image">
               <img src="/assets/images/top/pic-top-access-ekoda.webp" alt="" loading="lazy" decoding="async" width="592" height="296">
@@ -26,7 +26,7 @@ import Button from "../common/Button.astro";
             <p class="top-access-location">西武池袋線江古田駅北口<br>徒歩２分</p>
             <p class="top-access-link-text">Googleマップで開く</p>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="top-access-item">
+          <a href="https://maps.app.goo.gl/84Hq3a6nRPs78Uf98" target="_blank" rel="noopener noreferrer" class="top-access-item">
             <h3 class="top-access-title-lv3">練馬教室</h3>
             <div class="top-access-image">
               <img src="/assets/images/top/pic-top-access-nerima.webp" alt="" loading="lazy" decoding="async" width="592" height="296">
@@ -35,7 +35,7 @@ import Button from "../common/Button.astro";
             <p class="top-access-location">西武池袋線練馬駅北口<br>徒歩１分</p>
             <p class="top-access-link-text">Googleマップで開く</p>
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer" class="top-access-item">
+          <a href="https://maps.app.goo.gl/fPx3gsWe7GQpbu959#" target="_blank" rel="noopener noreferrer" class="top-access-item">
             <h3 class="top-access-title-lv3">中野教室<span>（広町みらい公園講座）</span></h3>
             <div class="top-access-image">
               <img src="/assets/images/top/pic-top-access-nakano.webp" alt="" loading="lazy" decoding="async" width="592" height="296">
@@ -45,9 +45,10 @@ import Button from "../common/Button.astro";
             <p class="top-access-link-text">Googleマップで開く</p>
           </a>
         </div>
+        <p class="top-access-text">各教室の所在地や交通アクセスの詳細、<br class="u-no-pc">駐輪場・駐車場情報などは、<br>アクセスページをご覧ください。</p>
         <div class="top-access-btn">
           <Button
-          buttonText="近隣の駐輪･駐車情報を見る"
+          buttonText="教室アクセスを見る"
           buttonUrl="/access"
         />
         </div>
@@ -171,8 +172,13 @@ import Button from "../common/Button.astro";
     }
   }
 
+  .top-access-text {
+    margin-block-start: 40px;
+    text-align: center;
+  }
+
   .top-access-btn {
-    margin-block-start: 64px;
+    margin-block-start: 32px;
     text-align: center;
   }
 
@@ -229,8 +235,12 @@ import Button from "../common/Button.astro";
       margin-block-start: auto;
     }
 
+    .top-access-text {
+      margin-block-start: 56px;
+    }
+
     .top-access-btn {
-      margin-block-start: 80px;
+      margin-block-start:40px;
     }
   }
 

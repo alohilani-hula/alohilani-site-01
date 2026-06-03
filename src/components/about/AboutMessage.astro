@@ -22,43 +22,43 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
 <style lang="scss">
   @use '../../styles/breakpoints' as *;
 
-  .about-message {
-    overflow: hidden;
-    background-image: url(/assets/images/about/bg-about-message.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
+  // .about-message {
+  //   overflow: hidden;
+  //   background-image: url(/assets/images/about/bg-about-message.webp);
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center center;
+  //   position: relative;
 
-    &::before,
-    &::after {
-      content: "";
-      width: 200px;
-      height: 160px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center center;
-      opacity: .3;
-      position: absolute;
-      z-index: 1;
-    }
+  //   &::before,
+  //   &::after {
+  //     content: "";
+  //     width: 200px;
+  //     height: 160px;
+  //     background-repeat: no-repeat;
+  //     background-size: contain;
+  //     background-position: center center;
+  //     opacity: .3;
+  //     position: absolute;
+  //     z-index: 1;
+  //   }
 
-    &::before {
-      background-image: url(../../../public/assets/images/global/icon-hibiscus-02.svg);
-      bottom: -10px;
-      left: -10px;
-    }
+  //   &::before {
+  //     background-image: url(../../../public/assets/images/global/icon-hibiscus-02.svg);
+  //     bottom: -10px;
+  //     left: -10px;
+  //   }
 
-    &::after {
-      background-image: url(../../../public/assets/images/global/icon-hibiscus-03.svg);
-      top: -10px;
-      right: -20px;
-    }
-  }
+  //   &::after {
+  //     background-image: url(../../../public/assets/images/global/icon-hibiscus-03.svg);
+  //     top: -10px;
+  //     right: -20px;
+  //   }
+  // }
 
   .about-message-section {
-    position: relative;
-    z-index: 10;
+    // position: relative;
+    // z-index: 10;
   }
 
   .about-message-title-lv2 {
@@ -73,45 +73,45 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
     line-height: 2;
   }
 
-  @include mq() {
-    .about-message {
-      &::before,
-      &::after {
-        width: 300px;
-        height: 240px;
-        transform: translateX(-50%);
-      }
+  // @include mq() {
+  //   .about-message {
+  //     &::before,
+  //     &::after {
+  //       width: 300px;
+  //       height: 240px;
+  //       transform: translateX(-50%);
+  //     }
 
-      &::before {
-        left: calc(50% - 320px);
-      }
+  //     &::before {
+  //       left: calc(50% - 320px);
+  //     }
 
-      &::after {
-        top: -20px;
-        right: auto;
-        left: calc(50% + 320px);
-      }
-    }
-  }
+  //     &::after {
+  //       top: -20px;
+  //       right: auto;
+  //       left: calc(50% + 320px);
+  //     }
+  //   }
+  // }
 
-  @media screen and (min-width: 1024px) {
-    .about-message {
-      &::before,
-      &::after {
-        width: 350px;
-        height: 280px;
-      }
+  // @media screen and (min-width: 1024px) {
+  //   .about-message {
+  //     &::before,
+  //     &::after {
+  //       width: 350px;
+  //       height: 280px;
+  //     }
 
-      &::before {
-        bottom: -30px;
-        left: calc(50% - 420px);
-      }
+  //     &::before {
+  //       bottom: -30px;
+  //       left: calc(50% - 420px);
+  //     }
 
-      &::after {
-        top: -40px;
-        right: auto;
-        left: calc(50% + 420px);
-      }
-    }
-  }
+  //     &::after {
+  //       top: -40px;
+  //       right: auto;
+  //       left: calc(50% + 420px);
+  //     }
+  //   }
+  // }
 </style>

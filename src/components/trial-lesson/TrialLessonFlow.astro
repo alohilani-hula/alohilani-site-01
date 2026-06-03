@@ -43,6 +43,7 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
             </ul>
           </li>
         </ol>
+        <p class="trial-lesson-flow-faq">その他ご質問がありましたら、<a href="/faq">よくあるご質問</a>もご参照ください。</p>
       </div><!-- /.l-section-body -->
     </div><!-- /.l-section -->
   </div><!-- /.l-container-s -->
@@ -65,30 +66,6 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
     width: fit-content;
     padding: 0;
     margin-inline: auto;
-  }
-
-  .trial-lesson-flow-item {
-    // position: relative;
-
-    // &:nth-child(1)::before,
-    // &:nth-child(3)::before {
-    //   content: "";
-    //   width: 2px;
-    //   background-color: var(--color-bg-blue);
-    //   position: absolute;
-    //   left: 15px;
-    //   z-index: 1;
-    // }
-
-    // &:nth-child(1)::before {
-    //   height: 120px;
-    //   top: 10px;
-    // }
-
-    // &:nth-child(3)::before {
-    //   height: 100px;
-    //   bottom: 10px;
-    // }
   }
 
   .trial-lesson-flow-heading {
@@ -163,18 +140,31 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
     }
   }
 
+  .trial-lesson-flow-faq {
+    width: fit-content;
+    padding-inline-start: 1em;
+    margin-block-start: 48px;
+    margin-inline: auto;
+    position: relative;
+
+    &::before {
+      content: "※";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  }
+
   @include mq() {
     .trial-lesson-flow-list {
       display: grid;
       gap: 32px;
       padding: 0;
-    }
-
-    .trial-lesson-flow-item {
-      // &:nth-child(1)::before,
-      // &:nth-child(2)::before {
-      //   left: 19px;
-      // }
     }
 
     .trial-lesson-flow-heading {
@@ -198,6 +188,10 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
 
     .trial-lesson-flow-text {
       padding-inline-start: 64px;
+    }
+
+    .trial-lesson-flow-faq {
+      margin-block-start: 64px;
     }
   }
 </style>

@@ -11,7 +11,11 @@ import ReservationForm from "../common/ReservationForm.astro";
       </div>
       <div class=" l-section-body">
         <div class="trial-lesson-form-content">
-          <ReservationForm />
+          <p class="trial-lesson-form-text">体験レッスンのお申し込みは、以下のフォームに必要事項を入力の上ご送信ください。</p>
+          <p class="trial-lesson-form-text">お申し込みを確認後1〜2日以内に、ご入力いただいたメールアドレスに詳細をご連絡させていただきます。</p>
+          <div class="trial-lesson-form-reservation-form">
+            <ReservationForm />
+          </div>
         </div>
       </div><!-- /.l-section-body -->
     </div><!-- /.l-section -->
@@ -29,5 +33,20 @@ import ReservationForm from "../common/ReservationForm.astro";
 
   .trial-lesson-form-title-lv2 {
     text-align: center;
+  }
+
+  .trial-lesson-form-text {
+    & + & {
+      margin-block-start: 16px;
+
+      @include mq() {
+        margin-block-start: 8px;
+      }
+    }
+
+  }
+
+  .trial-lesson-form-reservation-form {
+    margin-block-start: 40px;
   }
 </style>
