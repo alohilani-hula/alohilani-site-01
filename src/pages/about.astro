@@ -6,14 +6,15 @@ import AboutProfile from "../components/about/AboutProfile.astro";
 import AboutFeatures from "../components/about/AboutFeatures.astro";
 import AboutPurpose from "../components/about/AboutPurpose.astro";
 import AboutMessage from "../components/about/AboutMessage.astro";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
 import Cta from "../components/common/Cta.astro";
 
 ---
 
 <Layout
-  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  title="アロヒラニについて｜Ka Pā Hula O Alohilani"
   ogType="website"
-  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  description="アロヒラニの想いや教室の特徴をご紹介します。フラを通して仲間とつながり、心豊かな時間を過ごせるコミュニティを目指しています。"
   noIndex="true"
 >
   <main class="about">
@@ -42,8 +43,14 @@ import Cta from "../components/common/Cta.astro";
     <!-- about-message -->
     <AboutMessage />
 
+    <!-- breadcrumb -->
+    <Breadcrumb
+      siteUrl="https://alohilani-hula.com"
+      breadcrumbLists={[{ name: "アロヒラニについて", schemaName: "アロヒラニについて" }]}
+    />
   </main>
 
   <!-- cta -->
   <Cta />
+
 </Layout>

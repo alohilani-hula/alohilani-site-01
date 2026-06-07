@@ -1,6 +1,4 @@
 ---
-import Button from "./Button.astro";
-
 const { logo, logoAlt } = Astro.props;
 // const isTopPage = Astro.url.pathname === "/";
 ---
@@ -51,7 +49,7 @@ const { logo, logoAlt } = Astro.props;
         </ul>
       </nav>
     </div>
-    <a href="/trial-lesson" class="header-contact">体験申込</a>
+    <a href="/trial-lesson" class="header-contact">体験<span>レッスン</span>予約</a>
   </div><!-- /.header-container.l-container -->
 </header>
 
@@ -125,8 +123,6 @@ const { logo, logoAlt } = Astro.props;
   }
 
   .header-logo {
-    // width: 100%;
-    // max-width: 240px;
     width: min(240px, calc(210 / 1024 * 100vw));
 
     a {
@@ -155,6 +151,7 @@ const { logo, logoAlt } = Astro.props;
     a {
       display: block;
       padding-block: 8px;
+      color: var(--color-main);
       font-size: clamp(14px, calc(14px / 1024px * 100vw), 16px);
     }
 
@@ -163,16 +160,14 @@ const { logo, logoAlt } = Astro.props;
     }
 
     &:last-child {
-      // margin-inline-start: 12px;
       margin-inline-start: min(10px, calc(8 / 1024 * 100vw));
 
       a {
         display: grid;
         place-items: center;
         height: 80px;
-        // padding-inline: 32px;
         padding-inline: min(40px, calc(32 / 1024 * 100vw));
-        background-color: var(--color-main);
+        background-color: var(--color-orange);
         color: var(--color-white);
         font-weight: 700;
         text-align: center;
@@ -186,10 +181,6 @@ const { logo, logoAlt } = Astro.props;
   }
 
   @media screen and (max-width: 1023px) {
-    .header {
-      // font-size: 15px;
-    }
-
     .header-container {
       width: 100%;
       padding-inline: 80px;
@@ -302,6 +293,7 @@ const { logo, logoAlt } = Astro.props;
           place-items: center;
           height: auto;
           padding-inline: 0;
+          background-color: inherit;
 
           br {
             display: none;
@@ -312,10 +304,11 @@ const { logo, logoAlt } = Astro.props;
 
     .header-contact {
       display: block;
-      padding-block: 4px;
-      padding-inline: 12px;
+      padding-block: 6px;
+      padding-inline: 16px;
+      border-radius: 100px;
       margin-inline-end: calc(24px + 30px);
-      background-color: var(--color-main);
+      background-color: var(--color-orange);
       color: var(--color-white);
       font-size: 14px;
       font-weight: 700;
@@ -350,10 +343,14 @@ const { logo, logoAlt } = Astro.props;
 
     .header-contact {
       padding-block: 4px;
-      padding-inline: 10px;
+      padding-inline: 14px;
       margin-inline-end: calc(16px + 30px);
       margin-inline-end: clamp(calc(16px + 30px), calc(calc(16px / var(--width-sp) * 100vw) + 30px) ,calc(24px + 30px));
       font-size: 12px;
+
+      span {
+        display: none;
+      }
     }
   }
 

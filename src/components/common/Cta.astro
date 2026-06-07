@@ -3,60 +3,172 @@ import Button from "./Button.astro";
 ---
 
 <section class="c-cta">
-  <div class="l-container">
-    <h2 class="c-cta-title-lv2">（仮）まずは体験レッスンから始めてみませんか？</h2>
-    <p class="c-cta-text">初心者の方・お子さま連れの方も歓迎しています。<br>教室の雰囲気を、ぜひ一度体験してみてください。</p>
-    <div class="c-cta-btn">
-      <Button
-        buttonUrl="/contact"
-        buttonText="体験レッスンを申し込む"
-      />
+  <div class="c-cta-container">
+    <div class="c-cta-description">
+      <h2 class="c-cta-title-lv2">まずは体験レッスンから</h2>
+      <h3 class="c-cta-title-lv3">あなたらしい時間を、フラとともに</h3>
+      <p class="c-cta-text">子育てや仕事に向き合う毎日の中で、<br>ほっと一息つける時間を見つけてみませんか。<br>フラが初めての方も歓迎しています。</p>
+      <div class="c-cta-btn">
+        <Button
+        buttonClass="c-button c-button--cta"
+          buttonUrl="/trial-lesson"
+          buttonText="体験レッスンを申し込む"
+        />
+      </div>
     </div>
-  </div><!-- /.l-container -->
+    <div class="c-cta-image">
+      <img src="/assets/images/global/pic-cta.webp" alt="" loading="lazy" decoding="async" width="1440" height="812">
+    </div>
+  </div>
+  <div class="c-cta-image c-cta-image--outer">
+    <img src="/assets/images/global/pic-cta.webp" alt="" loading="lazy" decoding="async" width="1440" height="812">
+  </div>
 </section>
 
 <style is:global lang="scss">
   @use '../../styles/breakpoints' as *;
 
   .c-cta {
-    padding-block: 80px 72px;
-    background-color: pink;
+    padding-block-start: 56px;
+    background-image: url(/assets/images/global/bg-cta-sp.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .c-cta-description {
+    text-align: center;
   }
 
   .c-cta-title-lv2 {
-    font-size: 24px;
+    color: var(--color-orange);
+    font-size: 28px;
     font-weight: 700;
-    letter-spacing: .03em;
-    line-height: 1.4;
-    text-align: center;
+    line-height: 1.6;
+  }
+
+  .c-cta-title-lv3 {
+    margin-block-start: 24px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.6;
   }
 
   .c-cta-text {
-    width: fit-content;
-    margin-block-start: 32px;
-    margin-inline: auto;
+    margin-block-start: 16px;
   }
 
   .c-cta-btn {
-    margin-block-start: 64px;
-    text-align: center;
+    margin-block-start: 48px;
+  }
+
+  .c-cta-image {
+    margin-block-start: 48px;
+
+    img {
+      max-width: 640px;
+      border-top-left-radius: 1000px;
+      border-bottom-left-radius: 1000px;
+      margin-inline-start: auto;
+    }
+
+    &--outer {
+      display: none;
+    }
   }
 
   @include mq() {
     .c-cta {
-      padding-block: 120px 160px;
+      padding-block-start: 80px;
+      background-image: url(/public/assets/images/global/bg-cta-pc.webp);
     }
 
     .c-cta-title-lv2 {
       font-size: 32px;
     }
 
+    .c-cta-btn {
+      margin-block-start: 48px;
+    }
+
+    .c-cta-image {
+      margin-block-start: 64px;
+    }
+  }
+
+  @media screen and (min-width: 960px) {
+    .c-cta {
+      padding-block-start: 0;
+      background-image: url(/public/assets/images/global/bg-cta-pc.webp);
+      height: min(437px, calc(437px / var(--width-pc) * 100vw));
+      position: relative;
+    }
+
+    .c-cta-container {
+      display: grid;
+      align-items: center;
+      width: 100%;
+      height: inherit;
+      max-width: calc(var(--width-content) + 80px * 2);
+      padding-inline: 80px;
+      margin-inline: auto;
+      position: relative;
+    }
+
+    .c-cta-description {
+      text-align: left;
+    }
+
+    .c-cta-title-lv2 {
+      font-size: clamp(24px, calc(32px / 1280px * 100vw), 32px);
+    }
+
+    .c-cta-title-lv3 {
+      margin-block-start: clamp(8px, calc(16px / 1280px * 100vw), 16px);
+      font-size: clamp(16px, calc(20px / 1280px * 100vw), 20px);
+    }
+
     .c-cta-text {
-      margin-block-start: 40px;
+      margin-block-start: 8px;
+      font-size: clamp(14px, calc(16px / 1280px * 100vw), 16px);
     }
 
     .c-cta-btn {
-      margin-block-start: 48px;
+      margin-block-start: clamp(24px, calc(32px / 1280px * 100vw), 32px);
+    }
+
+    .c-cta-image {
+      display: none;
+      margin-block-start: 0;
+
+      &--outer {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        img {
+          max-width: min(775px, calc(775px / var(--width-pc) * 100vw));
+          margin-inline-start: 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width:  1600px) {
+    .c-cta-image {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      img {
+        max-width: 775px;
+      }
+
+      &--outer {
+        display: none;
+      }
     }
   }
 </style>

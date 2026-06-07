@@ -41,12 +41,12 @@
         </div>
         <ul class="footer-sns-list">
           <li class="footer-sns-item">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://page.line.me/746adfgc?oat_content=url&openQrModal=true" target="_blank" rel="noopener noreferrer">
               <img src="/assets/images/global/icon-line.svg" alt="LINE" loading="lazy" decoding="async" width="24" height="24">
             </a>
           </li>
           <li class="footer-sns-item">
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/alohilani.hula/" target="_blank" rel="noopener noreferrer">
               <img src="/assets/images/global/icon-instagram.svg" alt="Instagram" loading="lazy" decoding="async" width="24" height="24">
             </a>
           </li>
@@ -80,18 +80,18 @@
     let footerVisible = false;
 
     // フッター検知
-    const observer = new IntersectionObserver(
-      (entries) => {
-        footerVisible = entries[0].isIntersecting;
-        toggleButton();
-      },
-      {
-        root: null,
-        threshold: 0
-      }
-    );
+    // const observer = new IntersectionObserver(
+      // (entries) => {
+        // footerVisible = entries[0].isIntersecting;
+        // toggleButton();
+      // },
+      // {
+        // root: null,
+        // threshold: 0
+      // }
+    // );
 
-    observer.observe(footer);
+    // observer.observe(footer);
 
     // スクロール監視
     window.addEventListener("scroll", toggleButton);
@@ -238,8 +238,7 @@
   }
 
   @media (any-hover: hover) {
-    .footer-nav-item a,
-    .footer-blog a {
+    .footer-nav-item a {
       position: relative;
 
       &::before {
@@ -258,7 +257,8 @@
       }
     }
 
-    .footer-sns-item a {
+    .footer-sns-item a,
+    .footer-link a {
       transition: filter .3s ease;
 
       &:hover {
@@ -275,7 +275,7 @@
     height: 40px;
     border-radius: 50%;
     border: 2px solid;
-    color: var(--color-main);
+    color: var(--color-bg-blue);
     opacity: 0;
     pointer-events: none;
     transition: opacity .3s;
@@ -312,7 +312,7 @@
   @media (any-hover: hover)  {
     .footer-page-top {
       &:hover {
-        background-color: var(--color-main);
+        background-color: var(--color-bg-blue);
 
         &::after {
           border-color: var(--color-white);

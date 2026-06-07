@@ -128,7 +128,7 @@
       </a>に同意の上、チェックしてください。
     </p>
     <div class="c-form-field c-form-privacy-checkbox">
-      <label class="c-form-privacy-checkbox-label" for="privacy">
+      <label class="c-form-label c-form-privacy-checkbox-label" for="privacy">
         <input id="privacy" name="privacy" type="checkbox" required aria-describedby="privacy-description privacy-error" />
         <span class="c-form-privacy-checkbox-text">プライバシーポリシーに同意する。</span>
       </label>
@@ -457,24 +457,16 @@
 
   .c-form-privacy-checkbox {
     position: relative;
+    margin-block-start: 32px;
+  }
+
+  .c-form-privacy-checkbox-label {
     display: flex;
     gap: 8px;
     width: fit-content;
-    margin-block-start: 32px;
     margin-inline: auto;
-    position: relative;
+    font-weight: 400;
     cursor: pointer;
-
-    &::before {
-      content: '';
-      width: 18px;
-      height: 18px;
-      border-radius: 3px;
-      border: 1px solid #999;
-      flex-shrink: 0;
-      background-color: #fff;
-      margin-block-start: 4px;
-    }
   }
 
   .c-form-privacy-checkbox input {
@@ -490,6 +482,24 @@
     border: 0;
   }
 
+  .c-form-privacy-checkbox-text {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 18px;
+      border-radius: 3px;
+      border: 1px solid #999;
+      flex-shrink: 0;
+      background-color: #fff;
+      margin-block-start: 4px;
+    }
+  }
+
   .c-form-privacy-checkbox input:checked + .c-form-privacy-checkbox-text::after {
     content: '';
     position: absolute;
@@ -502,13 +512,12 @@
     border-width: 0 2px 2px 0;
   }
 
-  .c-form-privacy-checkbox input:focus-visible + .c-form-privacy-checkbox-text {
-    background: linear-gradient(transparent 90%, rgba(33, 150, 243, 0.3) 90%);
-  }
-
-  // invalid（checkbox）
   .c-form-privacy-checkbox input[aria-invalid='true'] + .c-form-privacy-checkbox-text::before {
     border-color: #cd3939;
+  }
+
+  .c-form-privacy-checkbox input:focus-visible + .c-form-privacy-checkbox-text {
+    background: linear-gradient(transparent 90%, rgba(33, 150, 243, 0.3) 90%);
   }
 
   // 送信ボタン

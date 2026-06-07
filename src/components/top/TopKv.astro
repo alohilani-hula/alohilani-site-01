@@ -1,101 +1,195 @@
 <section class="top-kv">
-  <div class="l-container">
-    <div class="top-kv-content">
-      ここにファーストビューが入ります。
+  <div class="top-kv-content">
+    <picture class="top-kv-image">
+      <source media="(max-width: 767px)" srcset="/assets/images/top/pic-top-kv-sp.webp">
+      <source media="(min-width: 768px)" srcset="/assets/images/top/pic-top-kv-pc.webp">
+      <img src="/assets/images/top/pic-top-kv-pc.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1000">
+    </picture>
+    <div class="top-kv-decoration">
+      <img src="/assets/images/top/image-top-kv-leaves.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="1040" height="356">
     </div>
-  </div><!-- /.l-container -->
+    <div class="top-kv-copy">
+      <div class="top-kv-copy-content">
+        <h1 class="top-kv-main-copy">
+          <span>毎日を頑張るあなたへ。</span>
+          <span>フラと仲間が、<br>人生をもっと豊かにする。</span>
+        </h1>
+        <p class="top-kv-sub-copy">子育てや仕事に向き合いながらも、<br>あなたらしい時間を見つけてみませんか。<br>アロヒラニでは、家族のような仲間が待っています。</p>
+      </div>
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
   @use '../../styles/breakpoints' as *;
 
   .top-kv {
-    padding-block: calc(100vh - 60px - 99.9%);
     margin-block-start: 60px;
-    background-color: var(--color-bg-skyblue);
+    background-image: url(/assets/images/top/bg-top-kv-sp.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
   }
 
   .top-kv-content {
+    padding-block: 72px;
     position: relative;
   }
 
+  .top-kv-image {
+    padding-inline-start: calc(20px / var(--width-sp) * 100vw);
+
+    img {
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+    }
+  }
+
+  .top-kv-decoration {
+    position: absolute;
+    top:0;
+    left: 0;
+
+    img {
+      max-width: 390px;
+    }
+  }
+
   .top-kv-copy {
-    display: flex;
-    flex-direction: column;
-    gap: 56px;
-    width: fit-content;
-    font-weight: 700;
+    padding-inline-end: calc(20px / var(--width-sp) * 100vw);
+    margin-block-start: -24px;
     position: relative;
     z-index: 10;
   }
 
+  .top-kv-copy-content {
+    padding-block: 24px;
+    padding-inline: calc(20px / var(--width-sp) * 100vw);
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    background-color: var(--color-bg-base);
+    box-shadow: 0 0 20px 0 rgb(30 124 144 / .2);
+  }
+
   .top-kv-main-copy {
-    font-size: min(24px, calc(20px / var(--width-sp) * 100vw));
-    letter-spacing: .03em;
+    display: grid;
+    font-size: min(24px, calc(24 / 375 * 100vw));
+    font-weight: 700;
+    color: #1e9ed4;
     line-height: 1.55;
   }
 
   .top-kv-sub-copy {
-    font-size: min(18px, calc(16px / var(--width-sp) * 100vw));
-    line-height: 1.6;
-  }
-
-  .top-kv-image {
-    width: fit-content;
-    margin-inline: auto;
-    opacity: .18;
-    position: absolute;
-    top: -24px;
-    right: 0;
-    left: -4px;
-    z-index: 1;
-
-    svg {
-      width: clamp(342px, calc(342px / var(--width-sp) * 100vw), 420px);
-    }
+    margin-block-start: 16px;
+    font-size: 14px;
+    letter-spacing: -.02em;
+    line-height: 1.65;
   }
 
   @include mq() {
     .top-kv {
-      padding-block: 250px;
       margin-block-start: 80px;
+      background-image: url(/assets/images/top/bg-top-kv-pc.webp);
     }
 
     .top-kv-content {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .top-kv-copy {
-      gap: min(56px, calc(56px / 1280px * 100vw));
-    }
-
-    .top-kv-main-copy {
-      font-size: min(38px, calc(38px / 1280px * 100vw));
-      line-height: 1.5;
-    }
-
-    .top-kv-sub-copy {
-      color: #555;
-      font-size: clamp(15px, calc(22px / 1280px * 100vw), 22px);
-      letter-spacing: .05em;
-      line-height: 1.5;
+      padding-block: 65px;
     }
 
     .top-kv-image {
-      margin-inline: 0;
-      opacity: 1;
-      position: static;
+      padding-inline-start: calc(480px / var(--width-pc) * 100vw);
+    }
 
-      svg {
-        width: min(420px, calc(420px / 1280px * 100vw));
+    .top-kv-decoration {
+      img {
+        max-width: 480px;
       }
+    }
+
+    .top-kv-copy {
+      padding-inline-end: 0;
+      margin-block-start: -32px;
+    }
+
+    .top-kv-copy-content {
+      width: fit-content;
+      padding-block: 32px;
+      padding-inline: 80px 24px;
+    }
+
+    .top-kv-main-copy {
+      font-size: 24px;
+
+      br {
+        display: none;
+      }
+    }
+
+    .top-kv-sub-copy {
+      margin-block-start: 12px;
+      font-size: 16px;
+      letter-spacing: normal;
     }
   }
 
   @media screen and (min-width: 1024px) {
+    .top-kv-image {
+      padding-inline-start: calc(480px / var(--width-pc) * 100vw);
+    }
+
+    .top-kv-decoration {
+      img {
+        max-width: 520px;
+      }
+    }
+
+    .top-kv-copy {
+      margin-block-start: 0;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+
+    .top-kv-copy-content {
+      padding-block: min(32px, calc(32px / var(--width-pc) * 100vw));
+      padding-inline: min(120px, calc(120px / var(--width-pc) * 100vw)) min(24px, calc(24px / var(--width-pc) * 100vw));
+    }
+
     .top-kv-main-copy {
-      letter-spacing: .05em;
+      font-size: clamp(18px, calc(24px / var(--width-pc) * 100vw), 24px);
+    }
+
+    .top-kv-sub-copy {
+      font-size: clamp(14px, calc(16px / var(--width-pc) * 100vw), 16px);
+    }
+  }
+
+  @media screen and (min-width: 1600px) {
+    .top-kv-content {
+      max-width: calc(1440px + 80px * 2);
+      padding-inline: 80px;
+      margin-inline: auto;
+    }
+
+    .top-kv-image {
+      padding-inline-start: 480px;
+
+      img {
+        border-radius: 0;
+      }
+    }
+
+    .top-kv-decoration {
+      left: 80px;
+    }
+
+    .top-kv-copy-content {
+      border-radius: 0;
+    }
+
+    .top-kv-copy {
+      left: 80px;
     }
   }
 </style>

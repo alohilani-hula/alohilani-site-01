@@ -6,12 +6,12 @@ import Footer from "../components/common/Footer.astro";
 const logo = "/assets/images/global/logo.png";
 const logoAlt = "Ka Pā Hula O Alohilani（カ・パー・フラ・オ・アロヒラニ）";
 const {
-  title = "所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作",
+  title = "Ka Pā Hula O Alohilani｜練馬区・中野区のフラダンス教室",
   ogType = "website",
   ogTitle = title,
-  description = "埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。",
+  description = "練馬区（江古田駅・練馬駅）・中野区（中野駅）を中心に活動するフラダンス教室「Ka Pā Hula O Alohilani（アロヒラニ）」。子どもから大人まで、初心者の方も歓迎しています。フラを通して自分らしい時間を楽しみませんか。。",
   ogDescription = description,
-  ogImage = "https://suzu-shika.com/ogp.png",
+  ogImage = "https://alohilani-hula.com/ogp.png",
   noIndex = false,
   jsonLd = [],
 } = Astro.props;
@@ -39,8 +39,8 @@ const jsonLdList = Array.isArray(jsonLd)
     <link rel="icon" type="image/png" href="/android-chrome-256x256.png">
 
     <!-- ogp -->
-    <meta property="og:site_name" content="鈴鹿Web制作">
-    <meta property="og:url" content={`https://suzu-shika.com${Astro.url.pathname}`} />
+    <meta property="og:site_name" content="Ka Pā Hula O Alohilani｜練馬区・中野区のフラダンス教室">
+    <meta property="og:url" content={`https://alohilani-hula.com${Astro.url.pathname}`} />
     <meta property="og:type" content={ogType}>
     <meta property="og:title" content={ogTitle}>
     <meta property="og:description" content={ogDescription}>

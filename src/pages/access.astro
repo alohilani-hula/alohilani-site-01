@@ -2,13 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import PageKv from "../components/common/PageKv.astro";
 import PageTitleLv2 from "../components/common/PageTitleLv2.astro";
-// import Cta from "../components/common/Cta.astro";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
+import Cta from "../components/common/Cta.astro";
 ---
 
 <Layout
-  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  title="アクセス｜教室一覧・アクセス情報｜Ka Pā Hula O Alohilani"
   ogType="website"
-  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  description="江古田教室・練馬教室・中野教室のアクセス情報をご案内します。最寄駅や所在地、周辺の駐輪場・駐車場情報もご確認いただけます。"
   noIndex="true"
 >
   <main class="access">
@@ -263,10 +264,15 @@ import PageTitleLv2 from "../components/common/PageTitleLv2.astro";
       </div><!-- /.l-container -->
     </section>
 
+    <!-- breadcrumb -->
+    <Breadcrumb
+      siteUrl="https://alohilani-hula.com"
+      breadcrumbLists={[{ name: "アクセス", schemaName: "アクセス" }]}
+    />
   </main>
 
   <!-- cta -->
-  <!-- <Cta /> -->
+  <Cta />
 </Layout>
 
 <style lang="scss">

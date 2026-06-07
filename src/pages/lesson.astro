@@ -5,14 +5,15 @@ import LessonOverview from "../components/lesson/LessonOverview.astro";
 import LessonStudio from "../components/lesson/LessonStudio.astro";
 import LessonFlow from "../components/lesson/LessonFlow.astro";
 import LessonSpecialCourse from "../components/lesson/LessonSpecialCourse.astro";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
 import Cta from "../components/common/Cta.astro";
 
 ---
 
 <Layout
-  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  title="レッスン紹介｜子どもクラス・大人クラス・親子フラ｜Ka Pā Hula O Alohilani"
   ogType="website"
-  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  description="ケイキクラス（子ども）、ワヒネ・クプナクラス（大人）、親子フラクラスなど、アロヒラニのレッスンをご紹介します。初心者の方も安心してご参加いただけます。"
   noIndex="true"
 >
   <main class="lesson">
@@ -38,6 +39,11 @@ import Cta from "../components/common/Cta.astro";
     <!-- lesson-special-course -->
     <LessonSpecialCourse />
 
+    <!-- breadcrumb -->
+    <Breadcrumb
+      siteUrl="https://alohilani-hula.com"
+      breadcrumbLists={[{ name: "レッスン紹介", schemaName: "レッスン紹介" }]}
+    />
   </main>
 
   <!-- cta -->

@@ -3,13 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import PageKv from "../components/common/PageKv.astro";
 import ContactLead from "../components/contact/ContactLead.astro";
 import ContactForm from "../components/contact/ContactForm.astro";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
 import Cta from "../components/common/Cta.astro";
 ---
 
 <Layout
-  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  title="お問い合わせ｜Ka Pā Hula O Alohilani"
   ogType="website"
-  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  description="レッスンに関するご質問や出張レッスン、イベント出演のご相談など、お気軽にお問い合わせください。"
   noIndex="true"
 >
   <main class="contact">
@@ -29,6 +30,10 @@ import Cta from "../components/common/Cta.astro";
     <!-- contact-form -->
     <ContactForm />
 
+    <Breadcrumb
+      siteUrl="https://alohilani-hula.com"
+      breadcrumbLists={[{ name: "お問い合わせ", schemaName: "お問い合わせ" }]}
+    />
   </main>
 
   <!-- cta -->

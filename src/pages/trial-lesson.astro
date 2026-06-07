@@ -5,13 +5,13 @@ import TrialLessonBelongings from "../components/trial-lesson/TrialLessonBelongi
 import TrialLessonPrice from "../components/trial-lesson/TrialLessonPrice.astro";
 import TrialLessonFlow from "../components/trial-lesson/TrialLessonFlow.astro";
 import TrialLessonForm from "../components/trial-lesson/TrialLessonForm.astro";
-// import Cta from "../components/common/Cta.astro";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
 ---
 
 <Layout
-  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  title="体験レッスンのご案内｜Ka Pā Hula O Alohilani"
   ogType="website"
-  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  description="アロヒラニの体験レッスンをご案内します。持ち物や料金、当日の流れをご確認の上、お申し込みください。初心者の方も歓迎しています。"
   noIndex="true"
 >
   <main class="trial-lesson">
@@ -37,8 +37,10 @@ import TrialLessonForm from "../components/trial-lesson/TrialLessonForm.astro";
     <!-- trial-lesson-form -->
     <TrialLessonForm />
 
+    <!-- breadcrumb -->
+    <Breadcrumb
+      siteUrl="https://alohilani-hula.com"
+      breadcrumbLists={[{ name: "体験レッスンのご案内", schemaName: "体験レッスンのご案内" }]}
+    />
   </main>
-
-  <!-- cta -->
-  <!-- <Cta /> -->
 </Layout>

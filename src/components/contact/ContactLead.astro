@@ -51,7 +51,8 @@
           <h3 class="contact-lead-title-lv3">お気軽にお問い合わせください</h3>
           <p class="contact-lead-text">フラダンスを通して、心と体をリフレッシュする時間をお届けします。</p>
           <p class="contact-lead-text">「このような内容でも依頼できる？」<br>「対象年齢に合わせた内容は可能？」<br>というご相談も歓迎しております。</p>
-          <p class="contact-lead-text">まずはお気軽にお問い合わせください。</p>
+          <p class="contact-lead-text">まずはお気軽にお問い合わせください。<br>内容を確認し、通常3日以内にご返信させていただきます。</p>
+          <p class="contact-lead-faq">その他ご質問がありましたら、<a href="/faq">よくあるご質問</a>もご参照ください。</p>
         </section>
       </div><!-- /.l-section-body -->
     </div><!-- /.l-section -->
@@ -144,6 +145,24 @@
       border-radius: 50%;
       margin-block-start: 12px;
       background-color: currentColor;
+    }
+  }
+
+  .contact-lead-faq {
+    padding-inline-start: 1em;
+    margin-block-start: 24px;
+    position: relative;
+
+    &::before {
+      content: "※";
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      text-underline-offset: 2px;
     }
   }
 

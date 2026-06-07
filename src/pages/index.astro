@@ -9,12 +9,78 @@ import TopFaq from "../components/top/TopFaq.astro";
 import TopAccess from "../components/top/TopAccess.astro";
 import Cta from "../components/common/Cta.astro";
 
+// 構造化データ生成関数
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://alohilani-hula.com/#business",
+      "name": "Ka Pā Hula O Alohilani",
+      "alternateName": "アロヒラニ",
+      "url": "https://alohilani-hula.com/",
+      "description": "練馬区・中野区を中心に活動するフラダンス教室。子どもから大人まで、初心者の方も歓迎しています。",
+      "image": "https://alohilani-hula.com/ogp.png",
+      "telephone": "",
+      "sameAs": [
+        "https://www.instagram.com/alohilani.hula/"
+      ],
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "練馬区"
+        },
+        {
+          "@type": "City",
+          "name": "中野区"
+        }
+      ]
+    },
+    {
+      "@type": "Place",
+      "@id": "https://alohilani-hula.com/#ekoda",
+      "name": "江古田教室",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "小竹町1-63-2",
+        "addressLocality": "練馬区",
+        "addressRegion": "東京都",
+        "addressCountry": "JP"
+      }
+    },
+    {
+      "@type": "Place",
+      "@id": "https://alohilani-hula.com/#nerima",
+      "name": "練馬教室",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "練馬1-19-2 NERIKITAビル",
+        "addressLocality": "練馬区",
+        "addressRegion": "東京都",
+        "addressCountry": "JP"
+      }
+    },
+    {
+      "@type": "Place",
+      "@id": "https://alohilani-hula.com/#nakano",
+      "name": "中野教室",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "弥生町6-1-7",
+        "addressLocality": "中野区",
+        "addressRegion": "東京都",
+        "addressCountry": "JP"
+      }
+    }
+  ]
+});
 ---
 
 <Layout
-  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  title="Ka Pā Hula O Alohilani｜練馬区・中野区のフラダンス教室"
   ogType="website"
-  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  description="練馬区（江古田駅・練馬駅）・中野区（中野駅）を中心に活動するフラダンス教室「Ka Pā Hula O Alohilani（アロヒラニ）」。子どもから大人まで、初心者の方も歓迎しています。フラを通して自分らしい時間を楽しみませんか。"
+  jsonLd={jsonLd}
   noIndex="true"
 >
   <main class="top">
@@ -41,6 +107,5 @@ import Cta from "../components/common/Cta.astro";
 
     <!-- top-access -->
     <TopAccess />
-
   </main>
 </Layout>

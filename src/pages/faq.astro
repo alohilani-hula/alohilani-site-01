@@ -2,13 +2,88 @@
 import Layout from "../layouts/Layout.astro";
 import PageKv from "../components/common/PageKv.astro";
 import PageTitleLv2 from "../components/common/PageTitleLv2.astro";
+import Breadcrumb from "../components/common/Breadcrumb.astro";
 import Cta from "../components/common/Cta.astro";
+
+// 構造化データ生成関数
+const faqJsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "@id": "https://alohilani-hula.com/faq#faq",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "ダンス未経験でも参加できますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい。現在通われている生徒様の中にも、未経験からスタートした方がたくさんいらっしゃいます。基礎から丁寧にサポートしますので、初めての方も安心してご参加ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "体が硬いのですが大丈夫ですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "問題ありません。無理なく体を動かしながらレッスンを行いますので、ご自身のペースで参加していただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "老後の楽しみとして、今からでも始められますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい。アロヒラニには幅広い年代の方が在籍しています。年齢に関係なく、それぞれのペースでフラを楽しんでいただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "小さな子共を同伴してレッスンに参加することはできますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい、大丈夫です。スタジオはクッションフロアのワンフロア空間ですので、お子様はスタジオ内で遊びながらお待ちいただけます。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "ケイキ（子供）クラスのレッスン中、保護者が待てる場所はありますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "はい。スタジオ内でお待ちいただけます。レッスンの様子を見学しながらお待ちいただくことも可能ですし、一度外出していただき、終了時間にお戻りいただくこともできます。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "レッスンには何を持参すればいいですか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Tシャツ、タオル、お飲み物、パウスカートをご持参ください。初回体験レッスン時には、パウスカートを貸し出しいたします。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "イベントや発表会の参加は必須ですか？ 衣装代等の費用が心配です。",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "イベント出演は自由です。ご自身の癒しの時間としてフラを楽しみたいという方、また目標を持ってフラを学びたい方、それぞれのご自身のスタイルで大丈夫です。イベント参加の場合は、イベントに応じて出演費がかかりますが、高額になることはありません。衣装を貸し出ししたり、皆さんで相談しながら工夫して、できるだけコストがかからないようにしていますので、ご安心ください。"
+      }
+    },
+    {
+      "@type": "Question",
+      name: "振替レッスンはできますか？",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "同月、および翌月に限り可能です。日程の調整が難しい場合はZoomレッスンに振り替えることも可能です。"
+      }
+    }
+  ]
+});
 ---
 
 <Layout
-  title="所沢市のホームページ制作｜設計で成果につなげるWeb制作｜鈴鹿Web制作"
+  title="よくあるご質問｜Ka Pā Hula O Alohilani"
   ogType="website"
-  description="埼玉県所沢市を拠点に、成果につながるホームページを設計・制作。コンテンツ・導線・運用まで一貫して設計し、公開後の改善まで見据えたWeb制作をご提案します。"
+  description="持ち物、振替レッスン、お子様同伴でのご参加、初心者の方のご参加など、アロヒラニによく寄せられるご質問をまとめました。"
+  jsonLd={faqJsonLd}
   noIndex="true"
 >
   <main class="faq">
@@ -100,6 +175,11 @@ import Cta from "../components/common/Cta.astro";
       </div><!-- /.l-container-s -->
     </section>
 
+    <!-- breadcrumb -->
+    <Breadcrumb
+      siteUrl="https://alohilani-hula.com"
+      breadcrumbLists={[{ name: "よくあるご質問", schemaName: "よくあるご質問" }]}
+    />
   </main>
 
   <!-- cta -->
@@ -109,7 +189,7 @@ import Cta from "../components/common/Cta.astro";
 <style lang="scss">
   @use '../styles/breakpoints' as *;
 
-  .faq {
+  .faq-content {
     background-color: var(--color-bg-skyblue);
   }
 
