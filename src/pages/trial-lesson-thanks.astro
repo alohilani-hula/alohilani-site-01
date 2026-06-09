@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="体験レッスン予約ありがとうございました｜Ka Pā Hula O Alohilani"
+  ogType="website"
+  description="体験レッスン予約ありがとうございます。内容を確認の上、1〜2日以内にご連絡いたします。"
+  noIndex="true"
+>
+  <main class="trial-lesson-thanks">
+    <div class="trial-lesson-thanks-container l-container-s">
+      <h1 class="trial-lesson-thanks-title-lv1">体験レッスン予約いただき、<span>ありがとうございます。</span></h1>
+      <div class="trial-lesson-thanks-content">
+        <p class="trial-lesson-thanks-text">入力いただいたメールアドレス宛に、確認メールをお送りしました。内容をご確認ください。<br>確認メールが届かない場合は、迷惑メールフォルダもあわせてご確認ください。</p>
+        <p class="trial-lesson-thanks-text">ご予約内容を確認の上、1〜2日以内にご連絡いたします。<br>2日を過ぎても連絡がない場合は、お手数ですがお問い合わせください。</p>
+        <div class="trial-lesson-thanks-top-link">
+          <a href="/">トップページに戻る</a>
+        </div>
+      </div>
+    </div><!-- /.l-container-s -->
+  </main>
+</Layout>
+
+<style lang="scss">
+  @use '../styles/breakpoints' as *;
+
+  .trial-lesson-thanks {
+    padding-block: 120px;
+  }
+
+  .trial-lesson-thanks-title-lv1 {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.55;
+    text-align: center;
+
+    span {
+      display: inline-block;
+    }
+  }
+
+  .trial-lesson-thanks-content {
+    margin-block-start: 32px;
+  }
+
+  .trial-lesson-thanks-text {
+    & + & {
+      margin-block-start: 1em;
+    }
+  }
+
+  .trial-lesson-thanks-top-link {
+    margin-block-start: 32px;
+
+    a {
+      display: inline-block;
+      padding-block: 4px;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+
+  @include mq() {
+    .trial-lesson-thanks {
+      padding-block: 200px;
+    }
+
+    .trial-lesson-thanks-container {
+      max-width: calc(720px + 80px * 2);
+    }
+
+    .trial-lesson-thanks-title-lv1 {
+      font-size: 32px;
+    }
+
+    .trial-lesson-thanks-content {
+      margin-block-start: 40px;
+    }
+
+    .trial-lesson-thanks-top-link {
+      margin-block-start: 40px;
+    }
+  }
+</style>

@@ -50,6 +50,10 @@ const jsonLdList = Array.isArray(jsonLd)
     <meta name="twitter:description" content={ogDescription}>
     <meta name="twitter:image:src" content={ogImage}>
 
+    <!-- Spride -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+
     <!-- JSON-LD -->
     {jsonLdList.map((item) => (
       <script type="application/ld+json" set:html={item}></script>

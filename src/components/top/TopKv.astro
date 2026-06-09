@@ -1,16 +1,40 @@
 <section class="top-kv">
   <div class="top-kv-content">
-    <picture class="top-kv-image">
-      <source media="(max-width: 767px)" srcset="/assets/images/top/pic-top-kv-sp.webp">
-      <source media="(min-width: 768px)" srcset="/assets/images/top/pic-top-kv-pc.webp">
-      <img src="/assets/images/top/pic-top-kv-pc.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1000">
-    </picture>
+    <div class="top-kv-image">
+      <div class="splide" role="group" aria-labelledby="carousel-heading">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide">
+              <picture>
+                <source media="(max-width: 767px)" srcset="/assets/images/top/pic-top-kv-01-sp.webp">
+                <source media="(min-width: 768px)" srcset="/assets/images/top/pic-top-kv-01-pc.webp">
+                <img src="/assets/images/top/pic-top-kv-01-pc.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1000">
+              </picture>
+            </li>
+            <li class="splide__slide">
+              <picture>
+                <source media="(max-width: 767px)" srcset="/assets/images/top/pic-top-kv-02-sp.webp">
+                <source media="(min-width: 768px)" srcset="/assets/images/top/pic-top-kv-02-pc.webp">
+                <img src="/assets/images/top/pic-top-kv-02-pc.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1000">
+              </picture>
+            </li>
+            <li class="splide__slide">
+              <picture>
+                <source media="(max-width: 767px)" srcset="/assets/images/top/pic-top-kv-03-sp.webp">
+                <source media="(min-width: 768px)" srcset="/assets/images/top/pic-top-kv-03-pc.webp">
+                <img src="/assets/images/top/pic-top-kv-03-pc.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="1920" height="1000">
+              </picture>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <div class="top-kv-decoration">
       <img src="/assets/images/top/image-top-kv-leaves.webp" alt="" loading="eager" decoding="async" fetchpriority="high" width="1040" height="356">
     </div>
     <div class="top-kv-copy">
       <div class="top-kv-copy-content">
-        <h1 class="top-kv-main-copy">
+        <h1 class="top-kv-main-copy" id="carousel-heading">
           <span>毎日を頑張るあなたへ。</span>
           <span>フラと仲間が、<br>人生をもっと豊かにする。</span>
         </h1>
@@ -19,6 +43,18 @@
     </div>
   </div>
 </section>
+
+<script>
+  new Splide(".splide", {
+    autoplay: true,
+    type: "fade",
+    interval: 3500,
+    speed: 2000,
+    rewind: true,
+    arrows: false,
+    pagination: false,
+  }).mount();
+</script>
 
 <style lang="scss">
   @use '../../styles/breakpoints' as *;
