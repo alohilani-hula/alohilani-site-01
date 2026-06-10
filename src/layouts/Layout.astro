@@ -5,13 +5,17 @@ import Footer from "../components/common/Footer.astro";
 
 const logo = "/assets/images/global/logo.png";
 const logoAlt = "Ka Pā Hula O Alohilani（カ・パー・フラ・オ・アロヒラニ）";
+
+const siteUrl = Astro.site ?? new URL("https://alohilani-hula.com");
+const currentUrl = new URL(Astro.url.pathname, siteUrl).toString();
+
 const {
   title = "Ka Pā Hula O Alohilani｜練馬区・中野区のフラダンス教室",
   ogType = "website",
   ogTitle = title,
-  description = "練馬区（江古田駅・練馬駅）・中野区（中野駅）を中心に活動するフラダンス教室「Ka Pā Hula O Alohilani（アロヒラニ）」。子どもから大人まで、初心者の方も歓迎しています。フラを通して自分らしい時間を楽しみませんか。。",
+  description = "練馬区（江古田駅・練馬駅）・中野区（中野駅）を中心に活動するフラダンス教室「Ka Pā Hula O Alohilani（アロヒラニ）」。子どもから大人まで、初心者の方も歓迎しています。フラを通して自分らしい時間を楽しみませんか。",
   ogDescription = description,
-  ogImage = "https://alohilani-hula.com/ogp.png",
+  ogImage = "https://alohilani-hula.com/ogp.jpg",
   noIndex = false,
   jsonLd = [],
 } = Astro.props;
@@ -30,6 +34,7 @@ const jsonLdList = Array.isArray(jsonLd)
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{title}</title>
     <meta name="description" content={description}>
+    <link rel="canonical" href={currentUrl}>
 
     { noIndex && <meta name="robots" content="noindex, nofollow" /> }
 
@@ -40,7 +45,7 @@ const jsonLdList = Array.isArray(jsonLd)
 
     <!-- ogp -->
     <meta property="og:site_name" content="Ka Pā Hula O Alohilani｜練馬区・中野区のフラダンス教室">
-    <meta property="og:url" content={`https://alohilani-hula.com${Astro.url.pathname}`} />
+    <meta property="og:url" content={currentUrl}>
     <meta property="og:type" content={ogType}>
     <meta property="og:title" content={ogTitle}>
     <meta property="og:description" content={ogDescription}>
@@ -53,6 +58,11 @@ const jsonLdList = Array.isArray(jsonLd)
     <!-- Spride -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js" defer></script>
+
+    <!-- ヒーロー背景画像のpreload -->
+    <link rel="preload" as="image" href="/assets/images/top/bg-kv-sp@2x.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/images/top/bg-top-kv-pc.webp" media="(min-width: 768px)" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/images/top/bg-top-kv-sp.webp" media="(max-width: 767px)" fetchpriority="high">
 
     <!-- JSON-LD -->
     {jsonLdList.map((item) => (
