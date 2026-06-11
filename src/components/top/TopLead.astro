@@ -13,7 +13,11 @@ import Button from "../common/Button.astro";
           <p class="top-lead-text">生徒一人ひとりが自分らしく輝き、自然や人とのつながりを感じながら温かな時間を過ごせる場を大切にしています。</p>
       </div>
       <div class="top-lead-image">
-        <img src="/assets/images/top/pic-top-lead.webp" alt="フラを踊る、アロヒラニのオーナー高橋正子" loading="lazy" decoding="async" width="1338" height="2326">
+        <picture>
+          <source media="(max-width: 767px)" srcset="/assets/images/top/pic-top-lead-sp.webp">
+          <source media="(min-width: 768px)" srcset="/assets/images/top/pic-top-lead-pc.webp">
+          <img src="/assets/images/top/pic-top-lead-pc.webp" alt="フラを踊る、アロヒラニのオーナー高橋正子" loading="lazy" decoding="async" width="1338" height="2326">
+        </picture>
       </div>
       <div class="top-lead-btn">
         <Button
@@ -59,7 +63,7 @@ import Button from "../common/Button.astro";
 
   .top-lead-image {
     position: absolute;
-    bottom: -144px;
+    bottom: -130px;
     right: -88px;
     z-index: 1;
 
