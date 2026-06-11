@@ -5,34 +5,56 @@ import Button from "../common/Button.astro";
 <section class="top-lead">
   <div class="l-container">
     <div class="l-section">
-      <h2 class="top-lead-title-lv2">アロハの心とともに。<br>仲間と笑い、あなたらしく輝く時間を。</h2>
+      <h2 class="top-lead-title-lv2">
+        アロハの心とともに。<br />仲間と笑い、あなたらしく輝く時間を。
+      </h2>
       <div class="top-lead-section-body l-section-body">
         <div class="top-lead-description">
-          <p class="top-lead-text">子育てに追われ自分を見失いかけた時、フラに出会い笑顔を取り戻すことができました。<br>その喜びを伝えたいと教室を開きました。</p>
-          <p class="top-lead-text">Alohilani（アロヒラニ）は「輝く空」という意味。</p>
-          <p class="top-lead-text">生徒一人ひとりが自分らしく輝き、自然や人とのつながりを感じながら温かな時間を過ごせる場を大切にしています。</p>
-      </div>
-      <div class="top-lead-image">
-        <picture>
-          <source media="(max-width: 767px)" srcset="/assets/images/top/pic-top-lead-sp.webp">
-          <source media="(min-width: 768px)" srcset="/assets/images/top/pic-top-lead-pc.webp">
-          <img src="/assets/images/top/pic-top-lead-pc.webp" alt="フラを踊る、アロヒラニのオーナー高橋正子" loading="lazy" decoding="async" width="1338" height="2326">
-        </picture>
-      </div>
-      <div class="top-lead-btn">
-        <Button
-          buttonText="アロヒラニってどんな教室？"
-          buttonUrl="/about"
-          buttonAriaLabel="アロヒラニについてを見る"
-        />
-      </div>
+          <p class="top-lead-text">
+            子育てに追われ自分を見失いかけた時、フラに出会い笑顔を取り戻すことができました。<br
+            />その喜びを伝えたいと教室を開きました。
+          </p>
+          <p class="top-lead-text">
+            Alohilani（アロヒラニ）は「輝く空」という意味。
+          </p>
+          <p class="top-lead-text">
+            生徒一人ひとりが自分らしく輝き、自然や人とのつながりを感じながら温かな時間を過ごせる場を大切にしています。
+          </p>
+        </div>
+        <div class="top-lead-image">
+          <picture>
+            <source
+              media="(max-width: 767px)"
+              srcset="/assets/images/top/pic-top-lead-sp.webp"
+            />
+            <source
+              media="(min-width: 768px)"
+              srcset="/assets/images/top/pic-top-lead-pc.webp"
+            />
+            <img
+              src="/assets/images/top/pic-top-lead-pc.webp"
+              alt="フラを踊る、アロヒラニのオーナー高橋正子"
+              loading="lazy"
+              decoding="async"
+              width="1338"
+              height="2326"
+            />
+          </picture>
+        </div>
+        <div class="top-lead-btn">
+          <Button
+            buttonText="アロヒラニってどんな教室？"
+            buttonUrl="/about"
+            buttonAriaLabel="アロヒラニについてを見る"
+          />
+        </div>
       </div><!-- /.l-section-body -->
     </div><!-- /.l-section -->
   </div><!-- /.l-container -->
 </section>
 
 <style lang="scss">
-  @use '../../styles/breakpoints' as *;
+  @use "../../styles/breakpoints" as *;
 
   .top-lead {
     overflow: hidden;
@@ -51,7 +73,7 @@ import Button from "../common/Button.astro";
   .top-lead-description {
     display: grid;
     gap: 1em;
-    padding-inline-end: calc(96px / var(--width-sp) * 100vw);
+    padding-inline-end: calc(96 / var(--width-sp) * 100vw);
   }
 
   .top-lead-text {

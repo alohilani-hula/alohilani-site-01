@@ -1,5 +1,5 @@
 ---
-const { pageTitle, pageTitleEnglish } = Astro.props;
+const { pageTitle, pageTitleImagePath, pageTitleImageWidth, pageTitleImageHeight } = Astro.props;
 ---
 
 <div class="c-page-kv">
@@ -10,7 +10,9 @@ const { pageTitle, pageTitleEnglish } = Astro.props;
     <div class="l-container">
       <div class="c-page-kv-heading">
         <h1 class="c-page-kv-title-lv1">{pageTitle}</h1>
-        <span class="c-page-kv-title-en" aria-hidden="true">{pageTitleEnglish}</span>
+        <div class="c-page-kv-image">
+          <img src={pageTitleImagePath} alt="" loading="eager" decoding="async" width={pageTitleImageWidth} height={pageTitleImageHeight}>
+        </div>
       </div>
     </div><!-- /.l-container -->
   </div>
@@ -48,22 +50,20 @@ const { pageTitle, pageTitleEnglish } = Astro.props;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    gap: 4px;
+    gap: 8px;
     color: var(--color-main);
-    line-height: 1.5;
   }
 
   .c-page-kv-title-lv1 {
     font-size: 14px;
     font-weight: 400;
-    letter-spacing: .05em;
   }
 
-  .c-page-kv-title-en {
-    font-family: -apple-system, BlinkMacSystemFont, "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
-    font-size: 32px;
-    font-weight: 700;
-    letter-spacing: .03em;
+  .c-page-kv-image {
+    img {
+      width: 85%;
+      margin-inline: auto;
+    }
   }
 
   @include mq() {
@@ -82,15 +82,17 @@ const { pageTitle, pageTitleEnglish } = Astro.props;
     }
 
     .c-page-kv-heading {
-      gap: 8px;
+      gap: 12px;
     }
 
     .c-page-kv-title-lv1 {
       font-size: 16px;
     }
 
-    .c-page-kv-title-en {
-      font-size: 40px;
+    .c-page-kv-image {
+      img {
+        width: 100%;
+      }
     }
   }
 </style>

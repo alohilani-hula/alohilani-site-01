@@ -42,20 +42,21 @@ import Button from "./Button.astro";
 
   .c-cta-title-lv2 {
     color: var(--color-orange);
-    font-size: 28px;
+    font-size: min(28px, calc(28 / 375 * 100vw));
     font-weight: 700;
     line-height: 1.6;
   }
 
   .c-cta-title-lv3 {
     margin-block-start: 24px;
-    font-size: 20px;
+    font-size: min(20px, calc(20 / 375 * 100vw));
     font-weight: 700;
     line-height: 1.6;
   }
 
   .c-cta-text {
     margin-block-start: 16px;
+    font-size: min(16px, calc(16 / 375 * 100vw));
   }
 
   .c-cta-btn {
@@ -100,7 +101,7 @@ import Button from "./Button.astro";
     .c-cta {
       padding-block-start: 0;
       background-image: url(/public/assets/images/global/bg-cta-pc.webp);
-      height: min(437px, calc(437px / var(--width-pc) * 100vw));
+      height: min(437px, calc(437 / var(--width-pc) * 100vw));
       position: relative;
     }
 
@@ -148,7 +149,7 @@ import Button from "./Button.astro";
         right: 0;
 
         img {
-          max-width: min(775px, calc(775px / var(--width-pc) * 100vw));
+          max-width: min(775px, calc(775 / var(--width-pc) * 100vw));
           margin-inline-start: 0;
         }
       }

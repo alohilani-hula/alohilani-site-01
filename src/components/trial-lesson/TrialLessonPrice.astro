@@ -17,7 +17,7 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
             </div>
             <div class="trial-lesson-price-description-item">
               <dt>子供<span>（小学生まで）</span></dt>
-              <dd><span>500円</span></dd>
+              <dd>500円</dd>
             </div>
             <div class="trial-lesson-price-description-item">
               <dt>個人レッスン</dt>
@@ -73,20 +73,11 @@ import PageTitleLv2 from "../common/PageTitleLv2.astro";
 
   .trial-lesson-price-description-item {
     display: flex;
-    gap: 40px;
-    gap: min(40px, calc(40 / 375 * 100vw));
-    gap: 24px;
-    gap: clamp(24px, calc(24 / 320 * 100vw), 40px);
+    justify-content: space-between;
 
     dt {
       flex: 150px 0 0;
       font-weight: 700;
-    }
-
-    dd {
-      span {
-        margin-inline-start: 11px;
-      }
     }
   }
 
