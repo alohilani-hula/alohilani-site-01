@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://alohilani-hula.com/sitemap-index.xml
