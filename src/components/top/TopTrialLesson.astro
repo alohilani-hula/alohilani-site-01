@@ -22,11 +22,7 @@ import Button from "../common/Button.astro";
             <h3 class="top-trial-lesson-title-lv3">体験レッスン料</h3>
             <dl class="top-trial-lesson-description-list">
               <div class="top-trial-lesson-description-item">
-                <dt>大人</dt>
-                <dd>1,000円</dd>
-              </div>
-              <div class="top-trial-lesson-description-item">
-                <dt>子供</dt>
+                <dt>グループレッスン</dt>
                 <dd>500円</dd>
               </div>
               <div class="top-trial-lesson-description-item">
@@ -148,8 +144,19 @@ import Button from "../common/Button.astro";
     font-size: 16px;
 
     dt {
-      flex: 100px 0 0;
+      flex: 130px 0 0;
       font-weight: 700;
+    }
+
+    dd {
+      flex: 64px 0 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    @media screen and (min-width: 1024px) {
+      justify-content: space-between;
+      gap: 0;
     }
   }
 
